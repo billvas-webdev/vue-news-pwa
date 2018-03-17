@@ -17,7 +17,7 @@
     name: 'About',
     data () {
       return{
-        msg: "This project is a responsive web application that leverages Vue JS, Axios, Node JS, News API, Bootstrap, JQuery. Hosted on a secure network to allow for service workers to cache content and allow resources to be available offline. It also provides up to the minute news content from over 50 news sources and access to the news organization's websites."
+        msg: "This project is a responsive web application that leverages Vue JS, Axios, Node JS and News API. Hosted on a secure network to allow for service workers to cache content and allow resources to be available offline. It also provides up to the minute news content from over 50 news sources and access to the news organization's websites."
       }
     }
   }
