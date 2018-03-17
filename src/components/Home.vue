@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <WeatherWidget></WeatherWidget>
+   <!-- <WeatherWidget></WeatherWidget> -->
     <SourceSelection v-on:sourceChanged="sourceChanged"></SourceSelection>
     <Newslist v-bind:source="source"></Newslist>
     <FootComp></FootComp>
@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import WeatherWidget from '@/components/WeatherWidget'
+//import WeatherWidget from '@/components/WeatherWidget'
 import SourceSelection from '@/components/SourceSelection'
 import Newslist from '@/components/Newslist'
 import FootComp from '@/components/FootComp'
@@ -18,7 +18,7 @@ import FootComp from '@/components/FootComp'
 export default {
     name: 'app',
     components: {
-      WeatherWidget,
+      //WeatherWidget,
       SourceSelection,
       Newslist,
       FootComp,

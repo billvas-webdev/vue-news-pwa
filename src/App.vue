@@ -1,54 +1,45 @@
 <template>
-  <div id="app">
-    <header>
-      <span>Vue.js PWA</span>
-    </header>
-    <main>
-      <img src="./assets/logo.png" alt="Vue.js PWA">
-      <router-view></router-view>
-    </main>
-  </div>
+  <transition name="fadeInDownBig">
+    <div class="animated fadeInDownBig">
+      <div class="container" id="app">
+        <HeadNav></HeadNav>
+        <router-view/>
+      </div>
+    </div>
+  </transition>
 </template>
-
 <script>
+import HeadNav from '@/components/HeadNav'
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    HeadNav:HeadNav
+  }
 }
 </script>
-
 <style>
-body {
-  margin: 0;
-}
-
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+* {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
 }
-
-main {
-  text-align: center;
-  margin-top: 40px;
+body {
+    background-color: #082542;
+    -webkit-animation: colorchange 7s; /* Chrome and Safari */
 }
-
-header {
-  margin: 0;
-  height: 56px;
-  padding: 0 16px 0 24px;
-  background-color: #35495E;
-  color: #ffffff;
+@keyframes colorchange{
+      0%   {background: #299cff;}
+      50%  {background: #082542;}
+      100%  {background: #082542;}
 }
-
-header span {
-  display: block;
-  position: relative;
-  font-size: 20px;
-  line-height: 1;
-  letter-spacing: .02em;
-  font-weight: 400;
-  box-sizing: border-box;
-  padding-top: 16px;
+@-webkit-keyframes colorchange{ /* Safari and Chrome - necessary duplicate */
+      0%   {background: #299cff;}
+      50%  {background: #082542;}
+      100%  {background: #082542;}
+}
+#app {
+    padding: 1px 0 1px 0;
+}
+.jumbotron{
+    margin-bottom: 3px;
 }
 </style>
