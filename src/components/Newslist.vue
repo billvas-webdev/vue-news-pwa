@@ -83,7 +83,9 @@ a:focus {
   text-decoration: none;
 }
 .media-object {
-    max-width: 52rem;
+   width: auto;
+    max-width: 100rem;
+    height: auto;
     max-height: 38rem;
     border-radius: 2em;
     padding: 2.5rem;
