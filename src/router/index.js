@@ -3,6 +3,9 @@ import Router from 'vue-router'
 import Home from '@/components/Home'
 import About from '@/components/About'
 import Contact from '@/components/Contact'
+import CitySearch from '@/components/CitySearch'
+import CurrentWeather from '@/components/CurrentWeather'
+import Forecast from '@/components/Forecast'
 
 
 
@@ -11,11 +14,11 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-    {
+    /*{
       path: '/',
       name: 'Home',
       component: Home
-    },
+    },*/
 
     {
       path: '/About',
@@ -27,6 +30,21 @@ export default new Router({
       path: '/Contact',
       name: 'Contact',
       component: Contact
+    },
+    {
+      path: '/',
+      name: 'CitySearch',
+      component: CitySearch
+    },
+    {
+      path: '/:cityId/current',
+      name: 'CurrentWeather',
+      component: CurrentWeather
+    },
+    {
+      path: '/:cityId/forecast',
+      name: 'Forecast',
+      component: Forecast
     }
 
   ]

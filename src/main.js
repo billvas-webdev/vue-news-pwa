@@ -6,6 +6,8 @@ import App from './App'
 
 import router from './router'
 
+import VueLocalStorage from 'vue-ls'
+
 import axios from "axios"
 
 import VueAxios from 'vue-axios'
@@ -14,7 +16,11 @@ Vue.config.productionTip = false
 
 Vue.use(VueAxios,axios)
 
+let options = {
+	namespace: 'weather_'
+};
 
+Vue.use(VueLocalStorage, options);
 
 /* eslint-disable no-new */
 new Vue({
