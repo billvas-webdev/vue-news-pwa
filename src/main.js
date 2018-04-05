@@ -8,7 +8,7 @@ import router from './router'
 
 import VueLocalStorage from 'vue-ls'
 
-import axios from "axios"
+import axios from 'axios'
 
 import VueAxios from 'vue-axios'
 

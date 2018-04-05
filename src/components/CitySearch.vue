@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class = "jumbotron">
     <favorite-cities v-bind:favoriteCities="favorites"></favorite-cities>
     <h2>City Search</h2>
     <message-container v-bind:messages="messages"></message-container>
@@ -28,7 +28,6 @@ import WeatherData from '@/components/WeatherData';
 import CubeSpinner from '@/components/CubeSpinner';
 import MessageContainer from '@/components/MessageContainer';
 import FavoriteCities from '@/components/FavoriteCities';
-
 export default {
   name: 'CitySearch',
   components: {
@@ -60,10 +59,8 @@ export default {
     getCities: function () {
       this.results = null;
       this.showLoading = true;
-
       let cacheLabel = 'CitySearch_' + this.query;
       let cacheExpiry = 15 * 60 * 1000; // 15 minutes
-
       if (this.$ls.get(cacheLabel)){
         console.log('Cached query detected.');
         this.results = this.$ls.get(cacheLabel);
@@ -92,7 +89,6 @@ export default {
   }
  }
 }
-
 </script>
 
 <style scoped>
@@ -104,7 +100,6 @@ export default {
 h1, h2 {
   font-weight: normal;
 }
-
 ul {
   list-style-type: none;
   padding: 0;
@@ -117,7 +112,6 @@ li {
   padding: 10px;
   margin: 5px;
 }
-
 a {
   color: #42b983;
 }

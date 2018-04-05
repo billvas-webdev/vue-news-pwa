@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="jumbotron">
     <h2>Current Weather <span v-if="weatherData"> for {{ weatherData.name }}, {{weatherData.sys.country }}</span></h2>
     <message-container v-bind:messages="messages"></message-container>
     <p>
@@ -24,6 +24,7 @@ import WeatherSummary from '@/components/WeatherSummary';
 import WeatherData from '@/components/WeatherData';
 import CubeSpinner from '@/components/CubeSpinner';
 import MessageContainer from '@/components/MessageContainer';
+//import Forecast from '@/components/Forecast'
 
 export default {
   name: 'CurrentWeather',
