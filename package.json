@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
-    "start": "node build/dev-server.js",
+    "start": "npm run dev",
     "build": "node build/build.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "test": "npm run unit"
@@ -14,8 +14,12 @@
   "dependencies": {
     "axios": "^0.18.0",
     "vue": "^2.5.2",
+    "vue-api": "0.0.3",
     "vue-axios": "^2.0.2",
-    "vue-router": "^3.0.1"
+    "vue-localstorage": "^0.6.2",
+    "vue-ls": "^3.0.3",
+    "vue-router": "^3.0.1",
+    "vue2-animate": "^1.0.4"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.5",
