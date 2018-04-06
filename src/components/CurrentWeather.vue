@@ -1,5 +1,6 @@
 <template>
   <div class="jumbotron">
+
     <h2>Current Weather <span v-if="weatherData"> for {{ weatherData.name }}, {{weatherData.sys.country }}</span></h2>
     <message-container v-bind:messages="messages"></message-container>
     <p>
@@ -24,8 +25,6 @@ import WeatherSummary from '@/components/WeatherSummary';
 import WeatherData from '@/components/WeatherData';
 import CubeSpinner from '@/components/CubeSpinner';
 import MessageContainer from '@/components/MessageContainer';
-//import Forecast from '@/components/Forecast'
-
 export default {
   name: 'CurrentWeather',
   components: {
@@ -44,22 +43,21 @@ export default {
   },
   created () {
     this.showLoading = true;
-    let cacheLabel = 'currentWeather_' + this.$route.params.cityId;
-    let cacheExpiry = 15 * 60 * 1000;
-
+    let cacheLabel = 'CurrentWeather_' + this.$route.params.cityId;
+    let cacheExpiry=15*60*1000;
     if (this.$ls.get(cacheLabel)) {
-      console.log('Cached value detected.');
-      this.weatherData = this.$ls.get(cacheLabel);
-      this.showLoading = false;
-    } else {
-      console.log('No cache detected. Making API request.');
-      API.get('weather', {
+      console.log('Cache query is available');
+      this.results=this.$ls.get(cacheLabel);
+      this.showLoading=false;
+    }
+    else {
+      console.log('No cache is available');
+    API.get('weather', {
       params: {
           id: this.$route.params.cityId
       }
     })
     .then(response => {
-      this.$ls.set(cacheLabel, response.data, cacheExpiry);
       this.showLoading = false;
       this.weatherData = response.data;
     })
@@ -71,9 +69,8 @@ export default {
       });
     });
   }
- }
 }
-
+}
 </script>
 
 <style scoped>
@@ -85,7 +82,6 @@ export default {
 h1, h2 {
   font-weight: normal;
 }
-
 ul {
   list-style-type: none;
   padding: 0;
@@ -101,5 +97,3 @@ a {
   color: #42b983;
 }
 </style>
-
-
