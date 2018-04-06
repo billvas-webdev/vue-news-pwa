@@ -1,10 +1,11 @@
 <template>
   <div class = "jumbotron">
     <favorite-cities v-bind:favoriteCities="favorites"></favorite-cities>
-    <h2>City Search</h2>
+    <h2>Weather Forecast</h2>
+    <h3>City Search</h3>
     <message-container v-bind:messages="messages"></message-container>
     <form v-on:submit.prevent="getCities">
-        <p>Enter city name: <input type="text" v-model="query" placeholder="Paris, TX"> <button type="submit">Go</button></p>
+        <p>Enter city name: <input type="text" v-model="query" placeholder="City"> <button type="submit">Go</button></p>
     </form>
     <load-spinner v-if="showLoading"></load-spinner>
     <ul class="cities" v-if="results && results.list.length > 0">
