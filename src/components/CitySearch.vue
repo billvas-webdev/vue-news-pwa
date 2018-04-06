@@ -1,8 +1,7 @@
 <template>
   <div class = "jumbotron">
-    <favorite-cities v-bind:favoriteCities="favorites"></favorite-cities>
+    <favorite-cities v-bind:favoriteCities='favorites'></favorite-cities>
     <h2>Weather Forecast</h2>
-    <h3>City Search</h3>
     <message-container v-bind:messages="messages"></message-container>
     <form v-on:submit.prevent="getCities">
         <p>Enter city name: <input type="text" v-model="query" placeholder="City"> <button type="submit">Go</button></p>
@@ -48,8 +47,8 @@ export default {
     }
   },
   created () {
-    if(this.$ls.get('favoriteCities')){
-      this.favorites = this.$ls.get('favoriteCities');
+    if (this.$ls.get('favoriteCities')) {
+      this.favorites=this.$ls.get('favoriteCities');
     }
   },
   methods: {
@@ -60,22 +59,23 @@ export default {
     getCities: function () {
       this.results = null;
       this.showLoading = true;
-      let cacheLabel = 'CitySearch_' + this.query;
-      let cacheExpiry = 15 * 60 * 1000; // 15 minutes
-      if (this.$ls.get(cacheLabel)){
-        console.log('Cached query detected.');
-        this.results = this.$ls.get(cacheLabel);
-        this.showLoading = false;
-      } else {
-        console.log('No cache available. Making API request.');
+      let cacheLabel= 'citySearch_' + this.query;
+      let cacheExpiry= 15*60*1000;
+      if(this.$ls.get(cacheLabel)) {
+        console.log('Cache Query Available');
+        this.results=this.$ls.get(cacheLabel);
+        this.showLoading=false;
+      }
+      else {
+        console.log('No Cache Available');
         API.get('find', {
         params: {
             q: this.query
         }
       })
       .then(response => {
-        this.$ls.set(cacheLabel, response.data, cacheExpiry);
-        console.log('New query has been cached as: ' + cacheLabel);
+        this.$ls.set(cacheLabel, response.data,cacheExpiry);
+        console.log('New Query Cached');
         this.results = response.data;
         this.showLoading = false;
       })
@@ -88,7 +88,7 @@ export default {
       });
     }
   }
- }
+}
 }
 </script>
 
@@ -117,5 +117,3 @@ a {
   color: #42b983;
 }
 </style>
-
-
