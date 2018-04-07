@@ -103,7 +103,10 @@ export default {
 
 <style scoped>
 .jumbotron {
-  background: lightblue;
+  padding-left: 16rem;
+  background: lightblue;  /* fallback for old browsers */
+  background: linear-gradient(to bottom,#082e42, #082f42); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to bottom, #082e42, #082f42);  /* Chrome 10-25, Safari 5.1-6 */
 }
 .fade-enter-active, .fade-leave-active {
   transition: opacity 1s
@@ -111,7 +114,8 @@ export default {
 .fade-enter, .fade-leave-to {
   opacity: 0
 }
-h1, h2 {
+.jumbotron{
+  color: lightgoldenrodyellow;
   font-weight: normal;
 }
 
@@ -121,15 +125,22 @@ ul {
 }
 li {
   display: inline-block;
-  width: 200px;
+  width: auto;
   min-height: 300px;
   border: solid 1px #e8e8e8;
   padding: 10px;
   margin: 5px;
+
+}
+.weatherSummary{
+  color: lightgoldenrodyellow;
 }
 
 a {
   color: #42b983;
+}
+dl {
+  color: black;
 }
 </style>
 

@@ -74,19 +74,23 @@ body{
     background: -webkit-linear-gradient(to bottom, #052440, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom,#052440, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-h2{#052440
+.form p {
+  text-shadow: 1px .75px 0 #052440;
+    color:lightgoldenrodyellow;
+}
+h2{
     margin-top: -2rem;
     margin-bottom: 10px;
-    text-shadow: 1px .75px 0 lightgoldenrodyellow;
-    color:#072137;
+    text-shadow: 1px .75px 0 #052440;
+    color:lightgoldenrodyellow;
     text-align: center;
     font-weight: bolder;
     font-family: 'Lato', arial, sans-serif;
     font-size: 3.75rem;
 }
 h4{
-    text-shadow: 1px .75px 0 lightgoldenrodyellow;
-    color:#072137;
+    text-shadow: 1px .75px 0 #052440;
+    color:lightgoldenrodyellow;
     text-align: center;
     font-size: 2rem;
     margin: -1rem 0 1rem 10rem;

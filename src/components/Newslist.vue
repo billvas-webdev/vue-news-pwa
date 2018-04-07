@@ -83,8 +83,8 @@ a:focus {
   text-decoration: none;
 }
 .media-object {
-   width: auto;
-    max-width: 100rem;
+    width: auto;
+    max-width: auto;
     height: auto;
     max-height: 38rem;
     border-radius: 2em;
@@ -97,8 +97,8 @@ a:focus {
     font-family: 'Avenir', 'Lato', 'Montserrat';
     background-color: #131313;
     background: #000000;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #201f23, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #201f23, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to top, #052440, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top,#052440, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border-radius: .5em;
     width: auto;
     height: 30.75rem;
