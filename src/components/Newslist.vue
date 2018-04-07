@@ -13,6 +13,7 @@
             <h4 class="media-heading"><a v-bind:href="article.url" target="_blank">{{article.title}}</a></h4>
             <h5><i>by {{article.author}}</i></h5>
             <p>{{article.description}}</p>
+            <message-container v-bind:messages="messages"></message-container>
           </div>
         </li>
         <!--</transition-group>-->
@@ -30,19 +31,22 @@
 
 <script>
 import CubeSpinner from '@/components/CubeSpinner';
+import MessageContainer from '@/components/MessageContainer';
 
 
 export default {
   name: 'Newslist',
   components: {
-    'load-spinner': CubeSpinner
+    'load-spinner': CubeSpinner,
+    'message-container': MessageContainer,
   },
   props: ['source'],
   data () {
     return {
       articles: [],
       errors: [],
-       showLoading: false,
+      showLoading: false,
+       messages: []
 
     }
   },
