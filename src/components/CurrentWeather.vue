@@ -74,13 +74,19 @@ export default {
 </script>
 
 <style scoped>
+.jumbotron {
+  background: lightblue;/* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #052440, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom,#052440, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 .errors li {
   color: red;
   border: solid red 1px;
   padding: 5px;
 }
 h1, h2 {
-  font-weight: normal;
+  font-weight: bold;
+  text-shadow: 1px .75px 0 lightgoldenrodyellow;
 }
 ul {
   list-style-type: none;
@@ -95,5 +101,11 @@ li {
 }
 a {
   color: #42b983;
+}
+div dl {
+   background: lightblue;/* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #758794, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom,#758794, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 </style>
