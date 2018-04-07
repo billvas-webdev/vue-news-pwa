@@ -30,27 +30,27 @@
 
 <style scoped>
 .navbar-nav>li>a{
-    color:#9cd1ff;
+    color:lightgoldenrodyellow;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -ms-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
 }
 .navbar-nav>li>a:hover {
-    color: #f8b500;
+    color: #9cd1ff;
 }
 .navbar-nav>li>a:focus {
     text-decoration: none;
 }
 .navbar-brand {
-    color: #9cd1ff;
+    color: lightgoldenrodyellow;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -ms-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
 }
 .navbar-brand:hover {
-    color: #f8b500;
+    color: #9cd1ff;
 }
 .navbar{
     font-size: 1.25em;
@@ -58,12 +58,13 @@
     margin-bottom: 4px;
     border-top: .5px solid lightgoldenrodyellow;
     border-radius: .5em;
-    background: -webkit-linear-gradient(to bottom, #052440, #F0F2F0);
-    background: linear-gradient(to bottom,#052440, #082642);
+    background: -webkit-linear-gradient(to bottom, #052440, #274969);
+    background: linear-gradient(to bottom,#052440, #274969);
 }
 h2{
     text-align: center;
     font-weight:bold;
     margin-bottom: 10px;
 }
+
 </style>

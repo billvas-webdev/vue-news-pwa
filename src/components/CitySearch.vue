@@ -94,12 +94,16 @@ export default {
 
 <style scoped>
 .jumbotron {
+  border-top: .5px solid lightgoldenrodyellow;
+    border-radius: .5em;
+  color: #052440;
   background: lightblue;/* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #052440, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom,#052440, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 ul.favorite-cities {
+    color: lightgoldenrodyellow;
     border: 1px solid #082642;
     border-radius: 1.65rem;
     list-style-type: none;
@@ -111,10 +115,13 @@ ul.favorite-cities {
     background: linear-gradient(to bottom,#052440, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-ul.favorite-cities li h2 {
+ul.favorite-cities li h2 a{
   text-shadow: 1px .75px 0 lightgoldenrodyellow;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+ul.favorite-cities a {
+  text-decoration: underline;
 }
 .errors li {
   color: red;
@@ -123,7 +130,8 @@ ul.favorite-cities li h2 {
 }
 h1, h2 {
   font-weight: bold;
-  text-shadow: 1px .75px 0 lightgoldenrodyellow;
+  color: lightgoldenrodyellow;
+  text-shadow: 1px .75px 0 #052440;
 }
 ul {
   list-style-type: none;
@@ -138,8 +146,12 @@ li {
   margin: 5px;
 }
 a {
-  color: #42b983;
+  color: lightgoldenrodyellow;
+  text-decoration: underline;
+  text-shadow: 1px .75px 0 #052440;
+  font-weight: 500
 }
+
 input {
   border-radius: 1rem;
   background-color: lightgoldenrodyellow;
