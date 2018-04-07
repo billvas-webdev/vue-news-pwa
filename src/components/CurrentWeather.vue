@@ -86,8 +86,10 @@ export default {
 }
 h1, h2 {
   font-weight: bold;
-  text-shadow: 1px .75px 0 lightgoldenrodyellow;
+  color: lightgoldenrodyellow;
+  text-shadow: 1px .75px 0 #052440;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
@@ -100,7 +102,10 @@ li {
   padding: 10px;
 }
 a {
-  color: #42b983;
+  color: lightgoldenrodyellow;
+  text-decoration: underline;
+  text-shadow: 1px .75px 0 #052440;
+  font-weight: 500
 }
 div dl {
    background: lightblue;/* fallback for old browsers */
