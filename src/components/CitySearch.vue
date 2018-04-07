@@ -93,13 +93,38 @@ export default {
 </script>
 
 <style scoped>
+.jumbotron {
+  background: lightblue;
+   background: #fff1e5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #052440, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom,#052440, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+ul.favorite-cities {
+    border: 1px solid #082642;
+    border-radius: 1.65rem;
+    list-style-type: none;
+    padding-top: 0px;
+    width: 26%;
+    float: right;
+     background: #fff1e5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #052440, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom,#052440, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+ul.favorite-cities li h2 {
+  text-shadow: 1px .75px 0 lightgoldenrodyellow;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 .errors li {
   color: red;
   border: solid red 1px;
   padding: 5px;
 }
 h1, h2 {
-  font-weight: normal;
+  font-weight: bold;
+  text-shadow: 1px .75px 0 lightgoldenrodyellow;
 }
 ul {
   list-style-type: none;
@@ -115,5 +140,14 @@ li {
 }
 a {
   color: #42b983;
+}
+input {
+  border-radius: 1rem;
+  background-color: lightgoldenrodyellow;
+    color:#2b3b50;
+    font-family: 'Avenir','Montserrat','Lato', arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    height: 4.5rem;
 }
 </style>
