@@ -2,6 +2,7 @@
   <div class="newslist">
     <div class="flex-container">
       <ul class="media-list">
+        <!-- <transition-group name="fade" tag="div" appear>-->
         <li class="media" v-for="article of articles">
           <div class="media-left">
             <a v-bind:href="article.url" target="_blank">
@@ -14,27 +15,34 @@
             <p>{{article.description}}</p>
           </div>
         </li>
+        <!--</transition-group>-->
       </ul>
       <ul v-if="errors && errors.length">
       <li v-for="error of errors">
         {{error.message}}
       </li>
     </ul>
+    <load-spinner v-if="showLoading"></load-spinner>
     </div>
   </div>
 </div>
 </template>
 
 <script>
+import CubeSpinner from '@/components/CubeSpinner';
 
 
 export default {
   name: 'Newslist',
+  components: {
+    'load-spinner': CubeSpinner
+  },
   props: ['source'],
   data () {
     return {
       articles: [],
-      errors: []
+      errors: [],
+       showLoading: false,
 
     }
   },
@@ -93,7 +101,7 @@ a:focus {
 .media {
     border-top: .5px solid #f8b500;
 }
-  li.media{
+li.media{
     font-family: 'Avenir', 'Lato', 'Montserrat';
     background-color: #131313;
     background: #000000;  /* fallback for old browsers */
@@ -111,24 +119,29 @@ a:focus {
     color:azure;
     font-size: 2.25rem;
 }
-  p{
+p {
     font-family: "Avenir", 'Montseratt';
     line-height: 1.25em;
     padding-right: 1.5em;
     font-size: 1.2em;
     font-weight: normal;
 }
-  h4 {
+h4 {
     line-height: 1em;
     font-size: 1.35em;
     padding-top: 1em;
-  }
-  h5 {
+}
+h5 {
     line-height: 1.5em;
     font-size: 1.75rem;
     color: #f8b500;
-  }
-
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 1s
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0
+}
 /********* Samsung Galaxy S5 ************/
 @media (max-width: 319px) and (min-width: 150px){
 li.media  {
