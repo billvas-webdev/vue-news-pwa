@@ -58,6 +58,8 @@
     margin-bottom: 4px;
     border-top: .5px solid lightgoldenrodyellow;
     border-radius: .5em;
+    background: -webkit-linear-gradient(to bottom, #052440, #F0F2F0);
+    background: linear-gradient(to bottom,#052440, #082642);
 }
 h2{
     text-align: center;

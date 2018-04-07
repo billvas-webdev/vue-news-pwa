@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class = "jumbotron">
     <h2>Five Day Hourly Forecast <span v-if="weatherData"> for {{ weatherData.city.name }}, {{weatherData.city.country }}</span></h2>
     <message-container v-bind:messages="messages"></message-container>
     <p>
@@ -102,6 +102,9 @@ export default {
 </script>
 
 <style scoped>
+.jumbotron {
+  background: lightblue;
+}
 .fade-enter-active, .fade-leave-active {
   transition: opacity 1s
 }

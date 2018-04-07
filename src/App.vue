@@ -27,12 +27,12 @@ body {
     -webkit-animation: colorchange 7s; /* Chrome and Safari */
 }
 @keyframes colorchange{
-      0%   {background: #299cff;}
+      0%   {background: #052440;}
       50%  {background: #082542;}
       100%  {background: #082542;}
 }
 @-webkit-keyframes colorchange{ /* Safari and Chrome - necessary duplicate */
-      0%   {background: #299cff;}
+      0%   {background: #052440;}
       50%  {background: #082542;}
       100%  {background: #082542;}
 }
