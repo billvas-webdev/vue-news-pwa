@@ -29,7 +29,8 @@
       data () {
         return {
           sources: [],
-          source: ''
+          source: '',
+          errors: []
 
   }
 },
@@ -115,7 +116,9 @@ h6{
     border:none;
     text-align:center;
     border-radius:.5em;
-    background-color:#072137;
+     background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, ##8c9ba5, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top,##8c9ba5, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border:1px solid lightgoldenrodyellow;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
@@ -126,6 +129,7 @@ h6{
   border:1px solid #072137;
   background:#1576cc;
   color: #072137;
+
 }
 .btn-primary:focus {
     text-decoration: none;
@@ -156,7 +160,7 @@ select.form-control {
     height: 27rem;
 }
 h2{
-    font-family: 'Avenir','Montserrat','Lato', arial, sans-serif;
+    font-family: 'Avenir','Montserrat','Lato', sans-serif;
     margin-top: -1.5rem;
     font-size: 3.2rem;
     font-weight: bolder;
