@@ -129,6 +129,7 @@ h6{
   border:1px solid #072137;
   background:#1576cc;
   color: #072137;
+
 }
 .btn-primary:focus {
     text-decoration: none;
@@ -159,7 +160,7 @@ select.form-control {
     height: 27rem;
 }
 h2{
-    font-family: 'Avenir','Montserrat','Lato', arial, sans-serif;
+    font-family: 'Avenir','Montserrat','Lato', sans-serif;
     margin-top: -1.5rem;
     font-size: 3.2rem;
     font-weight: bolder;
