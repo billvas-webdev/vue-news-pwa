@@ -137,10 +137,7 @@ li {
 }
 
 a {
-  color: lightgoldenrodyellow;
-  text-decoration: underline;
-  text-shadow: 1px .75px 0 #052440;
-  font-weight: 500
+  color: #42b983;
 }
 dl {
   color: black;
