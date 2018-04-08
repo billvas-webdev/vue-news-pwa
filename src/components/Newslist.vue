@@ -3,7 +3,7 @@
     <div class="flex-container">
       <ul class="media-list">
         <transition-group name="fade" tag="div" appear>
-        <li class="media" v-for="article of articles" :key="article.urlToImage">
+        <li class="media" v-for="article of articles" :key="article.url">
           <div class="media-left">
             <a v-bind:href="article.url" target="_blank">
               <img class="media-object" v-bind:src="article.urlToImage">
