@@ -29,7 +29,8 @@
       data () {
         return {
           sources: [],
-          source: ''
+          source: '',
+          errors: []
 
   }
 },
