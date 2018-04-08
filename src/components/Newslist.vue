@@ -2,8 +2,8 @@
   <div class="newslist">
     <div class="flex-container">
       <ul class="media-list">
-        <!-- <transition-group name="fade" tag="div" appear>-->
-        <li class="media" v-for="article of articles">
+        <transition-group name="fade" tag="div" appear>
+        <li class="media" v-for="article of articles" :key="article.urlToImage">
           <div class="media-left">
             <a v-bind:href="article.url" target="_blank">
               <img class="media-object" v-bind:src="article.urlToImage">
@@ -16,7 +16,7 @@
             <message-container v-bind:messages="messages"></message-container>
           </div>
         </li>
-        <!--</transition-group>-->
+      </transition-group>
       </ul>
       <ul v-if="errors && errors.length">
       <li v-for="error of errors">
@@ -46,7 +46,7 @@ export default {
       articles: [],
       errors: [],
       showLoading: false,
-       messages: []
+      messages: []
 
     }
   },
@@ -141,7 +141,7 @@ h5 {
     color: #f8b500;
 }
 .fade-enter-active, .fade-leave-active {
-  transition: opacity 1s
+  transition: opacity 1.5s
 }
 .fade-enter, .fade-leave-to {
   opacity: 0
