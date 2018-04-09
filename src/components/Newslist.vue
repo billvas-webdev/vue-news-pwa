@@ -1,8 +1,10 @@
 <template>
   <div class="newslist">
-    <favorite-articles v-bind:favoriteArticles='favorites'></favorite-articles>
+ <favorite-articles v-bind:favoriteArticles='favorites'></favorite-articles>
     <div class="flex-container">
+
       <ul class="media-list">
+
         <transition-group name="fade" tag="div" mode="out-in">
         <li class="media" v-for="article of articles" :key="article.url">
           <div class="media-left">
@@ -15,7 +17,7 @@
             <h5><i>by {{article.author}}</i></h5>
             <p>{{article.description}}</p>
             <p><button class="save" v-on:click="saveArticle(article)">Save Article to Favorites</button></p>
-            <message-container v-bind:messages="messages"></message-container>
+            <!--<message-container v-bind:messages="messages"></message-container>-->
           </div>
         </li>
       </transition-group>
@@ -128,74 +130,15 @@ export default {
   }
 }
 
-
-
-
- /*
- created () {
-    if (this.$ls.get('favoriteArticles')) {
-      this.favorites=this.$ls.get('favoriteArticles');
-    }
-  },
-
- methods: {
-
-   saveArticle: function (article) {
-      this.favorites.push(article);
-      this.$ls.set('favoriteArticles', this.favorites);
-    },
-    getArticles: function () {
-      this.results = null;
-      this.showLoading = true;
-      let cacheLabel= 'faveArticles_' + this.query;
-      let cacheExpiry= 15*60*1000;
-      if(this.$ls.get(cacheLabel)) {
-        console.log('Cache Query Available');
-        this.results=this.$ls.get(cacheLabel);
-        this.showLoading=false;
-      }
-      else {
-        console.log('No Cache Available');
-        this.axios.get('https://newsapi.org/v2/top-headlines?sources=' + source + '&apiKey=30fdd9c8493742eebe75a786fc36f1bd')('find', {
-        params: {
-            q: this.query
-        }
-      })
-      .then(response => {
-        this.$ls.set(cacheLabel, response.data,cacheExpiry);
-        console.log('New Query Cached');
-        this.results = response.data;
-        this.showLoading = false;
-      })
-      .catch(error => {
-        this.messages.push({
-          type: 'error',
-          text: error.message
-        });
-        this.showLoading = false;
-      });
-    }
-  }
-}
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 body{
   font-family: "Avenir";
+}
+h2 {
+  background: yellow;
 }
 a {
   color:#299cff;
@@ -210,6 +153,10 @@ a:hover {
 }
 a:focus {
   text-decoration: none;
+}
+
+#app > div > div.newslist > ul > li:nth-child(2) > a {
+  font-size: .5rem;
 }
 .media-object {
     width: auto;
@@ -262,6 +209,57 @@ h5 {
 }
 .fade-enter, .fade-leave-to {
   opacity: 0
+}
+
+ul.favorite-articles {
+    color: lightgoldenrodyellow;
+    border: 1px solid #082642;
+    border-radius: 1.65rem;
+    list-style-type: none;
+    padding-top: 0px;
+    width: 26%;
+    float: right;
+     background: #fff1e5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #052440, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom,#052440, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+ul.favorite-articles li h2 a{
+  text-shadow: 1px .75px 0 lightgoldenrodyellow;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+ul.favorite-articles a {
+  text-decoration: underline;
+}
+ button{
+    display:block; /* change this from inline-block */
+    width:40%; /* setting the width */
+    margin:0 auto; /* this will center  it */
+    font-weight: 500;
+    font-family: 'Avenir','Montserrat','Lato', arial, sans-serif;
+    font-size:.75em;
+    color:lightgoldenrodyellow;
+    border:none;
+    text-align:center;
+    border-radius:.5em;
+     background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, ##8c9ba5, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top,##8c9ba5, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border:1px solid lightgoldenrodyellow;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+button:hover {
+  border:1px solid #072137;
+  background:#1576cc;
+  color: #072137;
+
+}
+button:focus {
+    text-decoration: none;
 }
 /********* Samsung Galaxy S5 ************/
 @media (max-width: 319px) and (min-width: 150px){

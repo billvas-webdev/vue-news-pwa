@@ -1,10 +1,10 @@
 
 <template>
-    <ul class="favorite-cities">
+    <ul class="favorite-articles">
         <li><h2>Favorite Articles</h2></li>
         <li v-if="favoriteArticles.length < 1">No favorites articles to display.</li>
         <li v-for="article in favoriteArticles">
-          <router-link v-bind:to="{ name: 'Newslist', params: { articleURL: article.url} }">{{ article.url }}</router-link> <button v-on:click="removeArticle(article)" class="remove">x</button>
+          <router-link v-bind:to="{ name: 'Newslist', params: { articleURL: article.title} }">{{ article.title }}</router-link> <button v-on:click="removeArticle(article)" class="remove">x</button>
         </li>
     </ul>
 </template>
@@ -19,7 +19,7 @@ export default {
     favoriteArticles: Array
   },
   methods: {
-    removeCity: function (article) {
+    removeArticle: function (article) {
       let FavArticleIndex = this.favoriteArticles.indexOf(article);
       this.favoriteArticles.splice(FavArticleIndex, 1);
       this.$ls.set('favoriteArticles', this.favoriteArticles);
