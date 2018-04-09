@@ -1,6 +1,6 @@
 <template>
   <div class="newslist">
- <favorite-articles v-bind:favoriteArticles='favorites'></favorite-articles>
+
     <div class="flex-container">
 
       <ul class="media-list">
@@ -28,7 +28,9 @@
       </li>
     </ul>
     <load-spinner v-if="showLoading"></load-spinner>
+
     </div>
+    <favorite-articles v-bind:favoriteArticles='favorites'></favorite-articles>
   </div>
 </div>
 </template>
@@ -161,13 +163,13 @@ a:focus {
 .media-object {
     width: auto;
     max-width: auto;
-    height: auto;
+    height: 40%;
     max-height: 38rem;
     border-radius: 2em;
     padding: 2.5rem;
 }
 .media {
-    border-top: .5px solid #f8b500;
+    border-top: .5px solid lightgoldenrodyellow;
 }
 li.media{
     font-family: 'Avenir', 'Lato', 'Montserrat';
@@ -193,6 +195,7 @@ p {
     padding-right: 1.5em;
     font-size: 1.2em;
     font-weight: normal;
+
 }
 h4 {
     line-height: 1em;
@@ -202,7 +205,7 @@ h4 {
 h5 {
     line-height: 1.5em;
     font-size: 1.75rem;
-    color: #f8b500;
+    color: lightgoldenrodyellow;
 }
 .fade-enter-active, .fade-leave-active {
   transition: opacity 1.5s
@@ -212,16 +215,18 @@ h5 {
 }
 
 ul.favorite-articles {
+  font-size: 1.5rem;
+   text-shadow: 1px .75px 0 #052440;
     color: lightgoldenrodyellow;
     border: 1px solid #082642;
     border-radius: 1.65rem;
     list-style-type: none;
     padding-top: 0px;
-    width: 26%;
-    float: right;
-     background: #fff1e5;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #052440, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom,#052440, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 100%;
+    float: none;
+    background: #83939e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #052440, #83939e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom,#052440, #83939e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 ul.favorite-articles li h2 a{
@@ -243,9 +248,9 @@ ul.favorite-articles a {
     border:none;
     text-align:center;
     border-radius:.5em;
-     background: #000000;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, ##8c9ba5, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top,##8c9ba5, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #052440, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top,#052440, #4a5f72); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border:1px solid lightgoldenrodyellow;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
@@ -409,7 +414,7 @@ p{
 @media (max-width: 3000px) and (min-width: 992px){
 
 li.media  {
-    height: 37.5rem;
+    height: 31.5rem;
 }
 h4{
     margin: -.6rem 0 .75rem 0;
@@ -424,13 +429,16 @@ h5{
     line-height: 1.5rem;
 }
 p{
-    margin: 0rem 0 .5rem 0;
+    margin: 0rem 0 4.5rem 0;
     line-height: 2.6rem;
     font-size: 2.5rem;
  }
 .media-object {
-    width: 55rem;
-    height: 40rem;
+   width: 44rem;
+    /*max-width: auto;*/
+    height: 32rem;
+    /*max-height: 38rem;*/
+
     background-position: 50% 50%;
     background-repeat:   no-repeat;
     background-size:     cover;
