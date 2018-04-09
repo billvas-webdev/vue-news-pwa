@@ -1,8 +1,9 @@
 <template>
   <div class="newslist">
+    <favorite-articles v-bind:favoriteArticles='favorites'></favorite-articles>
     <div class="flex-container">
       <ul class="media-list">
-        <transition-group name="fade" tag="div" appear>
+        <transition-group name="fade" tag="div" mode="out-in">
         <li class="media" v-for="article of articles" :key="article.url">
           <div class="media-left">
             <a v-bind:href="article.url" target="_blank">
@@ -13,6 +14,7 @@
             <h4 class="media-heading"><a v-bind:href="article.url" target="_blank">{{article.title}}</a></h4>
             <h5><i>by {{article.author}}</i></h5>
             <p>{{article.description}}</p>
+            <p><button class="save" v-on:click="saveArticle(article)">Save Article to Favorites</button></p>
             <message-container v-bind:messages="messages"></message-container>
           </div>
         </li>
@@ -32,6 +34,7 @@
 <script>
 import CubeSpinner from '@/components/CubeSpinner';
 import MessageContainer from '@/components/MessageContainer';
+import FavoriteArticles from '@/components/FavoriteArticles';
 
 
 export default {
@@ -39,6 +42,7 @@ export default {
   components: {
     'load-spinner': CubeSpinner,
     'message-container': MessageContainer,
+    'favorite-articles': FavoriteArticles
   },
   props: ['source'],
   data () {
@@ -46,10 +50,15 @@ export default {
       articles: [],
       errors: [],
       showLoading: false,
-      messages: []
+      messages: [],
+      favorites: [],
+      favoriteArticles: []
 
     }
   },
+
+
+
 
   methods: {
     updateSource (source) {
@@ -61,9 +70,55 @@ export default {
       .catch(e => {
         //this.errors.push(e);
       })
+    },
+
+  saveArticle: function (article) {
+      this.favorites.push(article);
+      this.$ls.set('favoriteArticles', this.favorites);
+    },
+    getArticles: function () {
+      this.results = null;
+      this.showLoading = true;
+      let cacheLabel= 'faveArticles_' + this.query;
+      let cacheExpiry= 15*60*1000;
+      if(this.$ls.get(cacheLabel)) {
+        console.log('Cache Query Available');
+        this.results=this.$ls.get(cacheLabel);
+        this.showLoading=false;
+      }
+      else {
+        console.log('No Cache Available');
+        this.axios.get('https://newsapi.org/v2/top-headlines?sources=' + source + '&apiKey=30fdd9c8493742eebe75a786fc36f1bd')('find', {
+        params: {
+            q: this.query
+        }
+      })
+       .then(response => {
+        this.$ls.set(cacheLabel, response.data,cacheExpiry);
+        console.log('New Query Cached');
+        this.results = response.data;
+        this.showLoading = false;
+      })
+      .catch(error => {
+        this.messages.push({
+          type: 'error',
+          text: error.message
+        });
+        this.showLoading = false;
+      });
+    }
     }
   },
-  created () {
+
+
+ created () {
+    if (this.$ls.get('favoriteArticles')) {
+      this.favorites=this.$ls.get('favoriteArticles');
+    }
+  },
+
+
+    created () {
     this.updateSource(this.source);
   },
   watch: {
@@ -72,6 +127,68 @@ export default {
     }
   }
 }
+
+
+
+
+ /*
+ created () {
+    if (this.$ls.get('favoriteArticles')) {
+      this.favorites=this.$ls.get('favoriteArticles');
+    }
+  },
+
+ methods: {
+
+   saveArticle: function (article) {
+      this.favorites.push(article);
+      this.$ls.set('favoriteArticles', this.favorites);
+    },
+    getArticles: function () {
+      this.results = null;
+      this.showLoading = true;
+      let cacheLabel= 'faveArticles_' + this.query;
+      let cacheExpiry= 15*60*1000;
+      if(this.$ls.get(cacheLabel)) {
+        console.log('Cache Query Available');
+        this.results=this.$ls.get(cacheLabel);
+        this.showLoading=false;
+      }
+      else {
+        console.log('No Cache Available');
+        this.axios.get('https://newsapi.org/v2/top-headlines?sources=' + source + '&apiKey=30fdd9c8493742eebe75a786fc36f1bd')('find', {
+        params: {
+            q: this.query
+        }
+      })
+      .then(response => {
+        this.$ls.set(cacheLabel, response.data,cacheExpiry);
+        console.log('New Query Cached');
+        this.results = response.data;
+        this.showLoading = false;
+      })
+      .catch(error => {
+        this.messages.push({
+          type: 'error',
+          text: error.message
+        });
+        this.showLoading = false;
+      });
+    }
+  }
+}
+}*/
+
+
+
+
+
+
+
+
+
+
+
 
 </script>
 
