@@ -20,6 +20,9 @@ let options = {
 	namespace: 'weather_'
 };
 
+/*let options = {
+	namespace: 'favoriteArticles_'
+};*/
 Vue.use(VueLocalStorage, options);
 
 /* eslint-disable no-new */

@@ -1,10 +1,11 @@
 <template>
   <div class="container">
    <!-- <WeatherWidget></WeatherWidget> -->
+   <FavoriteArticles></FavoriteArticles>
     <CitySearch></CitySearch>
     <SourceSelection v-on:sourceChanged="sourceChanged"></SourceSelection>
     <Newslist v-bind:source="source"></Newslist>
-    <FootComp></FootComp>
+    <!--<FootComp></FootComp>-->
   </div>
 </template>
 
@@ -14,7 +15,7 @@ import CitySearch from '@/components/CitySearch'
 import SourceSelection from '@/components/SourceSelection'
 import Newslist from '@/components/Newslist'
 import FootComp from '@/components/FootComp'
-
+import FavoriteArticles from '@/components/FavoriteArticles'
 
 
 
@@ -26,6 +27,7 @@ export default {
       SourceSelection,
       Newslist,
       FootComp,
+      FavoriteArticles
     },
     data () {
     return {
