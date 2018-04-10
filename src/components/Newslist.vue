@@ -441,7 +441,7 @@ button:focus {
     line-height: 1.5rem;
   }
   p {
-    margin: 0rem 0 4.5rem 0;
+    margin: 0rem 0 4rem 0;
     line-height: 2.6rem;
     font-size: 2.5rem;
   }
