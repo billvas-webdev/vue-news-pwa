@@ -17,9 +17,12 @@ Vue.config.productionTip = false
 Vue.use(VueAxios,axios)
 
 let options = {
-	namespace: 'weather_'
+	namespace: 'favorites_'
 };
 
+/*let options = {
+	namespace: 'favoriteArticles_'
+};*/
 Vue.use(VueLocalStorage, options);
 
 /* eslint-disable no-new */

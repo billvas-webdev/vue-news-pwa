@@ -6,7 +6,8 @@ import Contact from '@/components/Contact'
 import CitySearch from '@/components/CitySearch'
 import CurrentWeather from '@/components/CurrentWeather'
 import Forecast from '@/components/Forecast'
-
+import FavoriteArticles from '@/components/FavoriteArticles'
+import Newslist from '@/components/Newslist'
 
 
 
@@ -45,7 +46,18 @@ export default new Router({
       path: '/:cityId/forecast',
       name: 'Forecast',
       component: Forecast
-    }
+    },
+   /* {
+      path: '/:articleURL/FavoriteArticles',
+      name: 'FavoriteArticles',
+      component: FavoriteArticles
+    },*/
+    /*{
+      path: '/:articleURL/FavoriteArticles',
+      name: 'Newslist',
+      component: Newslist
+    }*/
+
 
   ]
 });
