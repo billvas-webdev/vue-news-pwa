@@ -23,17 +23,25 @@
 
 <script>
 
-
-    export default {
+export default {
       name: 'SourceSelection',
       data () {
         return {
           sources: [],
           source: '',
           errors: []
-
   }
 },
+created () {
+  this.axios.get('https://newsapi.org/v2/sources?language=en&apiKey=30fdd9c8493742eebe75a786fc36f1bd')
+    .then(response => {
+      this.sources = response.data.sources
+    })
+    .catch(e => {
+      this.errors.push(e)
+    })
+  },
+
     methods: {
       sourceChanged: function (e) {
         for (var i=0; i<this.sources.length; i++) {
@@ -44,16 +52,6 @@
     this.$emit('sourceChanged', e.target.value);
   }
 },
-
-created () {
-   this.axios.get('https://newsapi.org/v2/sources?language=en&apiKey=30fdd9c8493742eebe75a786fc36f1bd')
-    .then(response => {
-      this.sources = response.data.sources
-    })
-    .catch(e => {
-      this.errors.push(e)
-    })
-  }
 }
 
 </script>
