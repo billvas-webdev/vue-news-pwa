@@ -17,7 +17,7 @@ Vue.config.productionTip = false
 Vue.use(VueAxios,axios)
 
 let options = {
-	namespace: 'weather_'
+	namespace: 'favorites_'
 };
 
 /*let options = {

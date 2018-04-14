@@ -54,7 +54,21 @@ export default {
       favoriteArticles: [],
     };
   },
+   created() {
+    this.updateSource(this.source);
+  },
 
+  watch: {
+    source(val) {
+      this.updateSource(val);
+    },
+
+  },
+  created() {
+    if (this.$ls.get('favoriteArticles')) {
+      this.favoriteArticles = this.$ls.get('favoriteArticles');
+    }
+  },
   methods: {
     updateSource(source) {
       this.axios
@@ -76,10 +90,11 @@ export default {
       this.favoriteArticles.push(article);
       this.$ls.set('favoriteArticles', this.favoriteArticles);
     },
+
     getArticles: function() {
       this.results = null;
       this.showLoading = true;
-      let cacheLabel = 'favoriteArticles_' + this.query;
+      let cacheLabel = 'favoriteArticles_' + this.$ls.article;
       let cacheExpiry = 15 * 60 * 1000;
       if (this.$ls.get(cacheLabel)) {
         console.log('Cache Query Available');
@@ -87,9 +102,9 @@ export default {
         this.showLoading = false;
       } else {
         console.log('No Cache Available');
-        API.get('find', {
+        this.localStorage.getItem('source', {
           params: {
-            q: this.query,
+            q: this.article,
           },
         })
           .then(response => {
@@ -108,22 +123,8 @@ export default {
       }
     },
   },
-
-  created() {
-    if (this.$ls.get('favoriteArticles')) {
-      this.favoriteArticles = this.$ls.get('favoriteArticles');
-    }
-  },
-
-  created() {
-    this.updateSource(this.source);
-  },
-  watch: {
-    source(val) {
-      this.updateSource(val);
-    },
-  },
 };
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
