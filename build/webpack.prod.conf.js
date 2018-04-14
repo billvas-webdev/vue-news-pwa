@@ -106,9 +106,9 @@ const webpackConfig = merge(baseWebpackConfig, {
     new SWPrecacheWebpackPlugin({
       cacheId: 'vue-news2',
       filename: 'service-worker.js',
-      staticFileGlobs: ['docs/**/*.{js,html,css}'],
+      staticFileGlobs: ['build/**/*.{js,html,css}'],
       minify: true,
-      stripPrefix: 'docs/'
+      stripPrefix: 'dist/'
     })
   ]
 })
