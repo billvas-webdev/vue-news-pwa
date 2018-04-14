@@ -51,8 +51,8 @@ export default new Router({
       path: '/:articleURL/FavoriteArticles',
       name: 'FavoriteArticles',
       component: FavoriteArticles
-    },*/
-    /*{
+    },
+    {
       path: '/:articleURL/FavoriteArticles',
       name: 'Newslist',
       component: Newslist
