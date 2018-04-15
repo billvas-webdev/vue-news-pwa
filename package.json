@@ -12,10 +12,13 @@
     "test": "npm run unit"
   },
   "dependencies": {
+    "ajv": "^6.4.0",
     "axios": "^0.18.0",
+    "sw-toolbox": "^3.6.0",
     "vue": "^2.5.2",
     "vue-api": "0.0.3",
     "vue-axios": "^2.0.2",
+    "vue-idb": "^0.2.0",
     "vue-localstorage": "^0.6.2",
     "vue-ls": "^3.0.3",
     "vue-router": "^3.0.1",
