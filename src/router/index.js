@@ -6,8 +6,8 @@ import Contact from '@/components/Contact'
 import CitySearch from '@/components/CitySearch'
 import CurrentWeather from '@/components/CurrentWeather'
 import Forecast from '@/components/Forecast'
-import FavoriteArticles from '@/components/FavoriteArticles'
-import Newslist from '@/components/Newslist'
+//import FavoriteArticles from '@/components/FavoriteArticles'
+//import Newslist from '@/components/Newslist'
 
 
 

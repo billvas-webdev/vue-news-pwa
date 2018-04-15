@@ -12,6 +12,8 @@ import axios from 'axios'
 
 import VueAxios from 'vue-axios'
 
+import VueIdb from 'vue-idb'
+
 Vue.config.productionTip = false
 
 Vue.use(VueAxios,axios)
@@ -24,6 +26,17 @@ let options = {
 	namespace: 'favoriteArticles_'
 };*/
 Vue.use(VueLocalStorage, options);
+
+Vue.use(VueIdb)
+
+const idb = new VueIdb({
+  version: 2,
+  database: 'news articles',
+  schemas: [
+    { source: 'id, name, author, updated_at' },
+  		{ posts: 'id, url' }
+  ]
+})
 
 /* eslint-disable no-new */
 new Vue({
