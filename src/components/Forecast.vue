@@ -128,8 +128,8 @@ li {
   width: auto;
   min-height: 300px;
   border: solid 1px #e8e8e8;
-  padding: 10px;
-  margin: 5px;
+  padding: 0px;
+  margin: 0px;
 
 }
 .weatherSummary{

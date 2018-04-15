@@ -12,7 +12,7 @@
       <router-link class="navbar-brand" to="/"><i class="fa fa-home" aria-hidden="true"></i> Daily News and Weather</router-link>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div class="navbar-collapse collapse" data-toggle="collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><router-link to="/about">About<span class="sr-only">(current)</span></router-link></li>
         <li><router-link to="/contact">Contact<span class="sr-only">(current)</span></router-link></li>

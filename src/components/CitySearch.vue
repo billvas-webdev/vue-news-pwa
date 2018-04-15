@@ -151,7 +151,6 @@ a {
   text-shadow: 1px .75px 0 #052440;
   font-weight: 500
 }
-
 input {
   border-radius: 1rem;
   background-color: lightgoldenrodyellow;
