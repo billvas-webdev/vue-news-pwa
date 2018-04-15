@@ -44,4 +44,7 @@ export default {
   padding: 2px;
   cursor: pointer;
 }
+h2 {
+  font-size: 2rem;
+}
 </style>
