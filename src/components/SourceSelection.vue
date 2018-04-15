@@ -1,13 +1,26 @@
 <template>
   <div class ="sourceselection">
     <div class="jumbotron">
-    <h2><span class="fa fa-newspaper-o"></span>Daily News</h2>
-    <h4> Select News Source</h4>
+    <h2><span class="far fa-newspaper"></span>Daily News</h2>
+    <!--<h4> Select News Source</h4>-->
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <select class="form-control" v-on:change="sourceChanged">
+
+
+ <div class="input-group">
+   <div class="input-group-addon">
+     <span class="far fa-newspaper"></span>
+   </div>
+    <select class="form-control"  v-on:change="sourceChanged">
+
+
+
+    <option value="">Please Select News Source </option>
     <option v-bind:value="source.id" v-for="source of sources">{{source.name}}</option>
+
     </select>
+    </div>
+
     <div v-if="source">
       <h6>{{source.description}}</h6>
       <a v-bind:href="source.url" class="btn btn-lg btn-primary btn-block" target="blank">Go To {{source.name}} Website</a>
@@ -57,6 +70,7 @@ created () {
 </script>
 
 <style scoped>
+@import url("https://use.fontawesome.com/releases/v5.0.10/js/all.js");
 body{
   font-family: 'Avenir','Montserrat','Lato', arial, sans-serif;
 }
@@ -149,6 +163,14 @@ select.form-control {
 }
 
 
+select {
+  font-family: 'FontAwesome', 'sans-serif';
+}
+.input-group-addon:first-child{
+   background-color: lightgoldenrodyellow;
+    color:#2b3b50;
+
+}
 
 /******* IPHONE 6 ********/
 @media only screen and (max-width: 337px) and (min-width: 320px){
