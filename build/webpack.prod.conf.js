@@ -106,9 +106,30 @@ const webpackConfig = merge(baseWebpackConfig, {
     new SWPrecacheWebpackPlugin({
       cacheId: 'vue-news2',
       filename: 'service-worker.js',
-      staticFileGlobs: ['docs/**/*.{js,html,css}'],
+      staticFileGlobs: ['docs/**/*.{js,html,css,png,jpeg}'],
       minify: true,
-      stripPrefix: 'docs/'
+      stripPrefix: 'docs/',
+      runtimeCaching: [
+        {
+          urlPattern: /^https:\/\/newsapi\.org\/api\/data\/get\.php\?id/,
+          handler: 'cacheLast'
+       },
+       {//api.openweathermap.org/data/2.5/
+        urlPattern: /^https:\/\/openweathermap\.org\/api\/data\/get\.php\?id/,
+        handler: 'cacheLast'
+     },
+      {
+        urlPattern: /^https:\/\/fonts\.googleapis\.com\//,
+        handler: 'cacheFirst'
+      },
+      {
+        urlPattern: /^https:\/\/fonts\.gstatic\.com\//,
+        handler: 'cacheFirst'
+      },
+      {
+        urlPattern: /^https:\/\/code\.getmdl\.io\//,
+        handler: 'cacheFirst'
+      }]
     })
   ]
 })
