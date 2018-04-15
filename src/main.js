@@ -30,13 +30,27 @@ Vue.use(VueLocalStorage, options);
 Vue.use(VueIdb)
 
 const idb = new VueIdb({
-  version: 2,
-  database: 'news articles',
-  schemas: [
-    { source: 'id, name, author, updated_at' },
-  		{ posts: 'id, url' }
-  ]
-})
+
+    database: 'bigtest',
+    schemas: [
+      { tests: 'id, title, created_at, updated_at' },
+      { bigs: 'uuid, caption, creation, update' }
+    ],
+    options: {
+      tests: { type: 'list', primary: 'id', label: 'label', updated_at: 'updated_at' },
+      bigs: { type: 'biglist', primary: 'uuid', label: 'caption', updated_at: 'update' }
+    },
+    apis: {
+      bigs: {
+        all: () => this.axios
+        .get(
+          'https://newsapi.org/v2/top-headlines?sources=' +
+            source +
+            '&apiKey=30fdd9c8493742eebe75a786fc36f1bd',
+        )
+      }
+    }
+  })
 
 /* eslint-disable no-new */
 new Vue({
