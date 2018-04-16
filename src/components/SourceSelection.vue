@@ -1,26 +1,19 @@
 <template>
   <div class ="sourceselection">
     <div class="jumbotron">
-    <h2><span class="far fa-newspaper"></span>Daily News</h2>
+    <h2><span class="far fa-newspaper"></span> Daily News</h2>
     <!--<h4> Select News Source</h4>-->
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
- <div class="input-group">
-   <div class="input-group-addon">
-     <span class="far fa-newspaper"></span>
-   </div>
-    <select class="form-control"  v-on:change="sourceChanged">
-
-
-
-    <option value="">Please Select News Source </option>
+  <div class="input-group">
+    <div class="input-group-addon">
+    <span class="far fa-hand-point-right"></span>
+  </div>
+  <select class="form-control"  v-on:change="sourceChanged">
+    <option value="">Select News Source </option>
     <option v-bind:value="source.id" v-for="source of sources">{{source.name}}</option>
-
-    </select>
-    </div>
-
+  </select>
+  </div>
     <div v-if="source">
       <h6>{{source.description}}</h6>
       <a v-bind:href="source.url" class="btn btn-lg btn-primary btn-block" target="blank">Go To {{source.name}} Website</a>
@@ -70,14 +63,14 @@ created () {
 </script>
 
 <style scoped>
-@import url("https://use.fontawesome.com/releases/v5.0.10/js/all.js");
+
 body{
   font-family: 'Avenir','Montserrat','Lato', arial, sans-serif;
 }
 .jumbotron {
     padding:1em;
     zoom: 155%;
-    height: 15.75em;
+    height: 12.75em;
     border-top: .5px solid lightgoldenrodyellow;
     border-radius: .5em;
     /*background-color: #3491e4;*/
@@ -147,29 +140,34 @@ h6{
     text-decoration: none;
 }
 select.form-control {
-    background-color: lightgoldenrodyellow;
-    color:#2b3b50;
     font-family: 'Avenir','Montserrat','Lato', arial, sans-serif;
     font-size: 2rem;
     font-weight: 500;
     height: 4.5rem;
+    /*background-color: lightgoldenrodyellow;*/
+    background: #fff1e5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #97a5ae, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom,#97a5ae, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color:#2b3b50;
 }
-.fa-newspaper-o {
+.far {
     position:relative;
-    font-size: 1.5em;
-    top:1.2rem;
-    right: 1rem;
-    font-weight: bolder;
+    font-size: 1em;
+    /*top:1.2rem;
+    right: 1rem;*/
+    font-weight: 500;
 }
 
 
 select {
   font-family: 'FontAwesome', 'sans-serif';
 }
-.input-group-addon:first-child{
-   background-color: lightgoldenrodyellow;
+.input-group-addon{
+    background-color: lightgoldenrodyellow;
     color:#2b3b50;
-
+    background: #fff1e5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #97a5ae, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom,#97a5ae, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 /******* IPHONE 6 ********/
