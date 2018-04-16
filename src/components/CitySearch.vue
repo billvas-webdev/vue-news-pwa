@@ -95,7 +95,7 @@ export default {
 <style scoped>
 .jumbotron {
   border-top: .5px solid lightgoldenrodyellow;
-    border-radius: .5em;
+  border-radius: .5em;
   color: #052440;
   background: lightblue;/* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #052440, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
@@ -103,22 +103,22 @@ export default {
 }
 
 ul.favorite-cities {
-    color: lightgoldenrodyellow;
-    border: 1px solid #082642;
-    border-radius: 1.65rem;
-    list-style-type: none;
-    padding-top: 0px;
-    width: 26%;
-    float: right;
-     background: #fff1e5;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #052440, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom,#052440, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: lightgoldenrodyellow;
+  border: 1px solid #082642;
+  border-radius: 1.65rem;
+  list-style-type: none;
+  padding-top: 0px;
+  width: 26%;
+  float: right;
+  background: #fff1e5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #052440, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom,#052440, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 ul.favorite-cities li h2 a{
   text-shadow: 1px .75px 0 lightgoldenrodyellow;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 ul.favorite-cities a {
   text-decoration: underline;
@@ -144,6 +144,7 @@ li {
   border: solid 1px #e8e8e8;
   padding: 10px;
   margin: 5px;
+  border-radius: 0.75em;
 }
 a {
   color: lightgoldenrodyellow;
@@ -153,11 +154,22 @@ a {
 }
 input {
   border-radius: 1rem;
-  background-color: lightgoldenrodyellow;
-    color:#2b3b50;
-    font-family: 'Avenir','Montserrat','Lato', arial, sans-serif;
-    font-size: 2rem;
-    font-weight: 500;
-    height: 4.5rem;
+  color:#2b3b50;
+  font-family: 'Avenir','Montserrat','Lato', arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  height: 4.5rem;
+  background: #fff1e5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #b5bec3, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom,#b5bec3, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /*background-color: lightgoldenrodyellow;*/
+}
+button {
+  font-weight:500;
+  border-radius: 0.25em;
+  background: #fff1e5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #b5bec3, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom,#b5bec3, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 </style>

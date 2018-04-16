@@ -209,7 +209,7 @@ h5 {
 }
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 1.5s;
+  transition: opacity 1.25s;
 }
 .fade-enter,
 .fade-leave-to {

@@ -1,21 +1,16 @@
 <template>
   <div class="jumbotron">
-
     <h2>Current Weather <span v-if="weatherData"> for {{ weatherData.name }}, {{weatherData.sys.country }}</span></h2>
     <message-container v-bind:messages="messages"></message-container>
     <p>
-      <router-link to="/">Home</router-link> |
+      <router-link to="/"><i class="fa fa-home"></i>Home</router-link> |
       <router-link v-bind:to="{ name: 'Forecast', params: { cityId: $route.params.cityId } }">View 5-Day Forecast</router-link>
     </p>
     <load-spinner v-if="showLoading"></load-spinner>
     <div v-if="weatherData">
-
       <weather-summary v-bind:weatherData="weatherData.weather"></weather-summary>
-
       <weather-data v-bind:weatherData="weatherData.main"></weather-data>
-
     </div>
-
   </div>
 </template>
 
@@ -102,13 +97,16 @@ li {
   padding: 10px;
 }
 a {
-  color: lightgoldenrodyellow;
+  color: #b1ffb9;
   text-decoration: underline;
   text-shadow: 1px .75px 0 #052440;
   font-weight: 500
 }
+a:hover {
+      color: #337ab7;
+}
 div dl {
-   background: lightblue;/* fallback for old browsers */
+  background: lightblue;/* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #758794, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom,#758794, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 

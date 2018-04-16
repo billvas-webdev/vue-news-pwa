@@ -6,9 +6,9 @@
          <img src="../assets/weather.png" class="img-responsive" id="weather-icon" height= "165" width= "155" alt="Cloud image">
         <h1>Daily News and Weather</h1></br>
       </div><!--//container-->
-        <div class="content"><p>{{msg}}</p>
-        </div><!--//content-->
-      </div><!--//bootstrap sizing-->
+    <div class="content"><p>{{msg}}</p>
+    </div><!--//content-->
+    </div><!--//bootstrap sizing-->
 
 </template>
 
@@ -17,7 +17,7 @@
     name: 'About',
     data () {
       return{
-        msg: "This project is a responsive web application that leverages Vue JS, Axios, Node JS and News API. Hosted on a secure network to allow for service workers, Local Storage and IndexDB to cache content and allow resources to be available offline. It also provides up to the minute news content from over 50 news sources and access to the news organization's websites."
+        msg: "This project is a responsive web application that leverages Vue JS, Axios, Node JS, OpenWeatherMap API and News API. Hosted on a secure network to allow for service workers, local storage and IndexedDB to cache content and allow resources to be available offline. It also provides up to the minute, searchable weather and news content from over 50 news sources and access to the news organization's websites."
       }
     }
   }
@@ -44,7 +44,7 @@ p{
 }
 .container{
   text-align:center;
-    height: 20em;
+    height: 21em;
     width: auto;
     padding: 2em 9em 1em 9em;
     border-top: 1px solid #f8b500;
@@ -130,13 +130,13 @@ h1{
 /******* IPAD Pro ********/
 @media (max-width: 1200px){
   .container  {
-     height: 38rem;
+    height: 38rem;
     padding: 1.5em 2.5em 0em 2.5em;
   }
 }
 @media (max-width: 991px){
   .container  {
-     height: 36rem;
+    height: 36rem;
     padding: 1.5em 2.5em 0em 2.5em;
   }
   h1{

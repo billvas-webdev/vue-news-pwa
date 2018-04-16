@@ -3,7 +3,7 @@
     <h2>Five Day Hourly Forecast <span v-if="weatherData"> for {{ weatherData.city.name }}, {{weatherData.city.country }}</span></h2>
     <message-container v-bind:messages="messages"></message-container>
     <p>
-      <router-link to="/">Home</router-link> |
+      <router-link to="/"><i class="fa fa-home"></i>Home</router-link> |
       <router-link v-bind:to="{ name: 'CurrentWeather', params: { cityId: $route.params.cityId } }">Current Weather <span v-if="weatherData"> for {{ weatherData.city.name }}, {{weatherData.city.country }}</span></router-link>
     </p>
 
@@ -103,7 +103,6 @@ export default {
 
 <style scoped>
 .jumbotron {
-  padding-left: 16rem;
   background: lightblue;  /* fallback for old browsers */
   background: linear-gradient(to bottom,#082e42, #082f42); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background: -webkit-linear-gradient(to bottom, #082e42, #082f42);  /* Chrome 10-25, Safari 5.1-6 */
@@ -121,15 +120,16 @@ export default {
 
 ul {
   list-style-type: none;
-  padding: 0;
+  padding-left: 7rem;
 }
 li {
   display: inline-block;
   width: auto;
   min-height: 300px;
   border: solid 1px #e8e8e8;
-  padding: 0px;
-  margin: 0px;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 1rem;
 
 }
 .weatherSummary{
@@ -137,10 +137,13 @@ li {
 }
 
 a {
-  color: lightgoldenrodyellow;
+  color: #b1ffb9;
   text-decoration: underline;
   text-shadow: 1px .75px 0 #052440;
   font-weight: 500
+}
+a:hover {
+      color: #337ab7;
 }
 dl {
   color: black;
