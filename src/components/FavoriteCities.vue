@@ -47,4 +47,19 @@ export default {
 h2 {
   font-size: 2rem;
 }
+h2 {
+  font-family: 'Montserrat','Lato', arial, sans-serif;
+  font-weight: bolder;
+  color: lightgoldenrodyellow;
+  text-shadow: 1px .75px 0 #052440;
+}
+a {
+    color: #052440;
+}
+a:hover {
+  background: #fff1e5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #44cc74, #009cf8);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom,#44cc74, #009cf8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-weight: 700;
+}
 </style>
