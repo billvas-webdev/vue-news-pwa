@@ -1,10 +1,10 @@
 <template>
   <div class = "jumbotron">
     <favorite-cities v-bind:favoriteCities='favorites'></favorite-cities>
-    <h2>Weather Forecast</h2>
+    <h2><i class="fas fa-sun fa-spin"></i>Weather Forecast</h2>
     <message-container v-bind:messages="messages"></message-container>
     <form v-on:submit.prevent="getCities">
-        <p>Enter city name: <input type="text" v-model="query" placeholder="City"> <button type="submit">Go</button></p>
+        <p>Enter city name: <input type="text" v-model="query" placeholder=" City"> <button type="submit">Go</button></p>
     </form>
     <load-spinner v-if="showLoading"></load-spinner>
     <ul class="cities" v-if="results && results.list.length > 0">
@@ -129,7 +129,8 @@ ul.favorite-cities a {
   padding: 5px;
 }
 h1, h2 {
-  font-weight: bold;
+  font-family: 'Montserrat','Lato', arial, sans-serif;
+  font-weight: bolder;
   color: lightgoldenrodyellow;
   text-shadow: 1px .75px 0 #052440;
 }
@@ -152,17 +153,29 @@ a {
   text-shadow: 1px .75px 0 #052440;
   font-weight: 500
 }
+a:hover {
+  background: #fff1e5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #44cc74, #009cf8);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom,#44cc74, #009cf8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-weight: 700;
+}
 input {
-  border-radius: 1rem;
-  color:#2b3b50;
+  border-radius: 0.8rem;
+  color:#555;
   font-family: 'Avenir','Montserrat','Lato', arial, sans-serif;
-  font-size: 2rem;
-  font-weight: 500;
+  font-size: 2.5rem;
+  font-weight: 600;
   height: 4.5rem;
   background: #fff1e5;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #b5bec3, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom,#b5bec3, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   /*background-color: lightgoldenrodyellow;*/
+}
+input:hover {
+  background: #fff1e5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #44cc74, #009cf8);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom,#44cc74, #009cf8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-weight: 700;
 }
 button {
   font-weight:500;
@@ -170,6 +183,15 @@ button {
   background: #fff1e5;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #b5bec3, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom,#b5bec3, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 
+button:hover {
+  background: #fff1e5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #44cc74, #009cf8);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom,#44cc74, #009cf8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+p {
+  font-weight: 400;
 }
 </style>

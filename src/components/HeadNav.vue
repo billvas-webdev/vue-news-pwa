@@ -31,30 +31,35 @@
 <style scoped>
 .navbar-nav>li>a{
     color:lightgoldenrodyellow;
+    font-weight:bold;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -ms-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
 }
 .navbar-nav>li>a:hover {
-    color: #9cd1ff;
+   /*color: #9cd1ff;*/
+    color: #44cc74;
 }
 .navbar-nav>li>a:focus {
     text-decoration: none;
 }
 .navbar-brand {
     color: lightgoldenrodyellow;
+    font-weight:bold;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -ms-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
 }
 .navbar-brand:hover {
-    color: #9cd1ff;
+    /*color: #9cd1ff;*/
+    color: #44cc74;
 }
-.navbar{
+.navbar {
+    font-weight: 500;
     font-size: 1.25em;
-    font-family: 'Lato', arial, sans-serif;
+    font-family: 'Montserrat''Lato', arial, sans-serif;
     margin-bottom: 4px;
     border-top: .5px solid lightgoldenrodyellow;
     border-radius: .5em;

@@ -9,12 +9,13 @@
     <div class="input-group-addon">
     <span class="far fa-hand-point-right"></span>
   </div>
-  <select class="form-control"  v-on:change="sourceChanged">
+  <select class="form-control list-inline" data-show-icon="true" v-on:change="sourceChanged">
+    <option data-content="<i class= 'far fa-hand-point-right'></i>"</option>
     <option value="">Select News Source </option>
     <option v-bind:value="source.id" v-for="source of sources">{{source.name}}</option>
   </select>
   </div>
-    <div v-if="source">
+  <div v-if="source">
       <h6>{{source.description}}</h6>
       <a v-bind:href="source.url" class="btn btn-lg btn-primary btn-block" target="blank">Go To {{source.name}} Website</a>
       <ul v-if="errors && errors.length">
@@ -74,8 +75,8 @@ body{
     border-top: .5px solid lightgoldenrodyellow;
     border-radius: .5em;
     /*background-color: #3491e4;*/
-    font-family: 'Avenir','Montserrat', sans-serif;
-    font-weight: bolder;
+    font-family: 'Montserrat', 'Avenir', sans-serif;
+    font-weight: bold;
     background: #fff1e5;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #052440, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom,#052440, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -84,14 +85,15 @@ body{
   text-shadow: 1px .75px 0 #052440;
     color:lightgoldenrodyellow;
 }
-h2{
-    margin-top: -2rem;
+h1,h2 {
+    font-family: 'Avenir','Montserrat','Lato', arial, sans-serif;
+    margin-top: -1rem;
     margin-bottom: 10px;
     text-shadow: 1px .75px 0 #052440;
     color:lightgoldenrodyellow;
     text-align: center;
     font-weight: bolder;
-    font-family: 'Lato', arial, sans-serif;
+    /*font-family: 'Lato', arial, sans-serif;*/
     font-size: 3.75rem;
 }
 h4{
@@ -140,6 +142,7 @@ h6{
     text-decoration: none;
 }
 select.form-control {
+    color: #555;
     font-family: 'Avenir','Montserrat','Lato', arial, sans-serif;
     font-size: 2rem;
     font-weight: 500;
@@ -148,8 +151,17 @@ select.form-control {
     background: #fff1e5;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #97a5ae, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom,#97a5ae, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color:#2b3b50;
+    /*color:#2b3b50;*/
+    border-top-left-radius:0px !important;
+    border-bottom-left-radius: 0px !important;
+
 }
+select.form-control:hover {
+  background: #fff1e5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #44cc74, #009cf8);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom,#44cc74, #009cf8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 .far {
     position:relative;
     font-size: 1em;
@@ -158,10 +170,6 @@ select.form-control {
     font-weight: 500;
 }
 
-
-select {
-  font-family: 'FontAwesome', 'sans-serif';
-}
 .input-group-addon{
     background-color: lightgoldenrodyellow;
     color:#2b3b50;
@@ -397,7 +405,7 @@ h6{
     height: 25rem;
 }
 h2{
-    font-family: 'Ariel','Montserrat','Lato', arial, sans-serif;
+
     margin-top: -1.5rem;
     font-size: 3.2rem;
 }
