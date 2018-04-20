@@ -4,7 +4,7 @@
     <h2><i class="fas fa-sun fa-spin"></i>Weather Forecast</h2>
     <message-container v-bind:messages="messages"></message-container>
     <form v-on:submit.prevent="getCities">
-        <p>Enter city name: <input type="text" v-model="query" placeholder=" City"> <button type="submit">Go</button></p>
+        <p>Enter city name: <input type="text" v-model="query" placeholder=" City" id="placeholder"> <button type="submit">Go</button></p>
     </form>
     <load-spinner v-if="showLoading"></load-spinner>
     <ul class="cities" v-if="results && results.list.length > 0">
@@ -96,6 +96,7 @@ export default {
 .jumbotron {
   border-top: .5px solid lightgoldenrodyellow;
   border-radius: .5em;
+  padding: 2rem 3rem 1rem 3rem ;
   color: #052440;
   background: lightblue;/* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #052440, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
@@ -131,6 +132,8 @@ ul.favorite-cities a {
 h1, h2 {
   font-family: 'Montserrat','Lato', arial, sans-serif;
   font-weight: bolder;
+  font-size: 3.3rem;
+  margin: 0rem 0 1rem 0;
   color: lightgoldenrodyellow;
   text-shadow: 1px .75px 0 #052440;
 }
@@ -194,4 +197,24 @@ button:hover {
 p {
   font-weight: 400;
 }
+
+@media only screen and (max-width: 360px) and (min-width: 337px){
+ul.favorite-cities  {
+  width: 100%;
+  float: none;
+}
+
+
+h2 {
+font-size: 2.75rem;
+
+}
+input {
+  height: 4rem;
+}
+#placeholder {
+  font-size:2.25rem;
+}
+}
+
 </style>

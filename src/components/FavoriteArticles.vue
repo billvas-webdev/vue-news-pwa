@@ -58,4 +58,10 @@ a:hover {
   background: linear-gradient(to bottom,#44cc74, #009cf8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   font-weight: 700;
 }
+
+@media only screen and (max-width: 360px) and (min-width: 337px){
+h2 {
+  font-size: 2.2rem;
+}
+}
 </style>
