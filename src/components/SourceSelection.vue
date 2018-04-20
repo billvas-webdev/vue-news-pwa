@@ -2,7 +2,6 @@
   <div class ="sourceselection">
     <div class="jumbotron">
     <h2><span class="far fa-newspaper"></span> Daily News</h2>
-    <!--<h4> Select News Source</h4>-->
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <div class="input-group">
@@ -86,7 +85,7 @@ body{
     color:lightgoldenrodyellow;
 }
 h1,h2 {
-    font-family: 'Avenir','Montserrat','Lato', arial, sans-serif;
+    font-family: 'Montserrat','Avenir','Lato', arial, sans-serif;
     margin-top: -1rem;
     margin-bottom: 10px;
     text-shadow: 1px .75px 0 #052440;
@@ -94,7 +93,7 @@ h1,h2 {
     text-align: center;
     font-weight: bolder;
     /*font-family: 'Lato', arial, sans-serif;*/
-    font-size: 3.75rem;
+    font-size: 3.65rem;
 }
 h4{
     text-shadow: 1px .75px 0 #052440;
@@ -186,7 +185,7 @@ select.form-control:hover {
     height: 27rem;
 }
 h2{
-    font-family: 'Avenir','Montserrat','Lato', sans-serif;
+    font-family: 'Montserrat','Avenir','Lato', sans-serif;
     margin-top: -1.5rem;
     font-size: 3.2rem;
     font-weight: bolder;
@@ -220,8 +219,8 @@ h6{
     height: 25.5rem;
 }
 h2{
-    font-family: 'Avenir','Montserrat','Lato', arial, sans-serif;
-    margin-top: -1.5rem;
+    font-family: 'Montserrat','Avenir','Lato', arial, sans-serif;
+    margin-top: 0rem;
     font-size: 3.2rem;
     font-weight: bolder;
 }
@@ -243,7 +242,6 @@ h6{
     width:auto;
     font-size: 1.5rem;
 }
-
 }
 
 @media (max-width: 389px) and (min-width: 361px){
