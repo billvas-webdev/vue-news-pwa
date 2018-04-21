@@ -1,9 +1,10 @@
 <template>
     <ul class="favorite-cities">
         <li><h2>Favorite Cities</h2></li>
+        <div class="clear"></div>
         <li v-if="favoriteCities.length < 1">No favorites cities to display.</li>
         <li v-for="city in favoriteCities">
-          <router-link v-bind:to="{ name: 'CurrentWeather', params: { cityId: city.id } }">{{ city.name }}</router-link> <button v-on:click="removeCity(city)" class="remove">x</button>
+         <router-link v-bind:to="{ name: 'CurrentWeather', params: { cityId: city.id} }">{{ city.name }}</router-link> <button v-on:click="removeCity(city)" class="fas fa-trash-alt"></button>
         </li>
     </ul>
 </template>
@@ -38,32 +39,83 @@ export default {
   background: linear-gradient(to bottom,#052440, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .remove {
-  font-size: 0.8rem;
-  color: white;
-  background: #AA0000;
-  padding: 2px;
+  font-size: 1.65rem;
+  color: #052440;
+  background: #052440;
   cursor: pointer;
+}
+.clear {
+  clear:both;
 }
 h2 {
   font-family: 'Montserrat','Lato', arial, sans-serif;
   font-weight: bolder;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: lightgoldenrodyellow;
   text-shadow: 1px .75px 0 #052440;
 }
-a {
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+}
+li {
+  float: left;
+
+}
+li a button{
     color: #052440;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+a {
+  padding-left: .85rem;
+  font-size: 1.65rem;
+  font-weight: 500;
+  color:#323204;
 }
 a:hover {
+  padding-right: .75rem;
+  border-radius: .5rem;
   background: #fff1e5;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #44cc74, #009cf8);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom,#44cc74, #009cf8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   font-weight: 700;
+
+
 }
+.button {
+  color: #009cf8;
+}
+.fa-trash-alt {
+  font-size: 1.5rem;
+  padding:0;
+  color:#4f0018;
+  border-radius: .3rem;
+  background: lightgoldenrodyellow;
+}
+
+
+.fa-trash-alt:hover {
+  color:#44cc74;
+  font-size: 2.35rem;
+  font-weight: 600;
+}
+
+
 @media only screen and (max-width: 360px) and (min-width: 337px){
 h2 {
-  font-size: 2.2rem;
-  margin: .55rem 0 .55rem 0;
+   margin:1rem auto;
+  font-size: 2rem;
+
+
+}
+a {
+  clear: right;
+  padding-left: 1rem;
 }
 }
 </style>
