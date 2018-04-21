@@ -177,7 +177,7 @@ h1{
 @media only screen and (max-width: 360px){
   .container  {
     padding: 1rem 1rem 0rem 1rem ;
-    height: 38.5rem;
+    height: 41rem;
 }
   h1{
     font-size: 2.4rem;
