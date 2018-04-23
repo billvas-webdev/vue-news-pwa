@@ -59,7 +59,7 @@
 .navbar {
     font-weight: 500;
     font-size: 1.25em;
-    font-family: 'Montserrat''Lato', arial, sans-serif;
+    font-family: 'Montserrat','Lato', arial, sans-serif;
     margin-bottom: 4px;
     border-top: .5px solid lightgoldenrodyellow;
     border-radius: .5em;

@@ -12,8 +12,8 @@
           <div class="media-body">
             <h4 class="media-heading"><a v-bind:href="article.url" target="_blank">{{article.title}}</a></h4>
             <h5><i>by {{article.author}}</i></h5>
-            <p>{{article.description}}</p>
-            <p><button class="save" v-on:click="saveArticle(article)">Save Article to Favorites</button></p>
+            <p class="article-description">{{article.description}}</p>
+            <button class="save" v-on:click="saveArticle(article)"><i class="far fa-bookmark"></i> Save Article to Favorites</button>
            <message-container v-bind:messages="messages"></message-container>
           </div>
         </li>
@@ -129,6 +129,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.flex-container {
+  height:auto;
+}
 body {
   font-family: 'Avenir';
 }
@@ -180,7 +183,8 @@ li.media {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border-radius: 0.5em;
   width: auto;
-  height: 30.75rem;
+  height: auto;
+  /*height: 30.75rem;*/
 }
 .newslist {
   -webkit-transition: all 1.4s ease-in-out;
@@ -249,7 +253,7 @@ ul.favorite-articles a {
 }
 button {
   display: block; /* change this from inline-block */
-  width: 40%; /* setting the width */
+  width: auto; /* setting the width */
   margin: 0 auto; /* this will center  it */
   font-weight: 500;
   font-family: 'Avenir', 'Montserrat', 'Lato', arial, sans-serif;
@@ -258,6 +262,7 @@ button {
   border: none;
   text-align: center;
   border-radius: 0.5em;
+  padding: .5rem;
   background: #000000; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to top,
@@ -287,7 +292,7 @@ button:focus {
 @media (max-width: 319px) and (min-width: 150px) {
   li.media {
     padding: 0.5rem 2.25rem 0rem 2.5rem;
-    height: 52rem;
+    height: auto;
   }
   .media-object {
     display: none;
@@ -301,10 +306,16 @@ button:focus {
     line-height: 1.1em;
     font-size: 2.6rem;
   }
+button {
+  width: auto;
+  font-weight: 300;
+  padding: .25rem;
+}
+
 }
 @media (max-width: 359px) and (min-width: 320px) {
   li.media {
-    height: 18.5rem;
+    height: auto;
     padding: 0.25rem 0.25rem 0rem 0.25rem;
   }
 
@@ -335,10 +346,15 @@ button:focus {
     line-height: 1.3rem;
     font-size: 1.4rem;
   }
+button {
+  width: auto;
+  font-weight: 300;
+  padding: .25rem;
 }
-@media (max-width: 733px) and (min-width: 360px) {
+}
+@media (max-width: 568px) and (min-width: 360px) {
   li.media {
-    height: 18.5rem;
+    height: auto;
     padding: 0.25rem 0rem 0rem 0rem;
   }
   .media-object {
@@ -365,15 +381,21 @@ button:focus {
     font-size: 1rem;
     line-height: 1.5rem;
   }
-  p {
-    margin: -0.75rem 0 0.5rem 0;
+  .article-description {
+    margin: -.5rem .2rem 0.35rem 0;
     line-height: 1.5rem;
     font-size: 1.45rem;
   }
+button {
+  width: auto;
+  font-weight: 300;
+  padding: .3rem;
+  font-size: 1.25rem;
+}
 }
 @media (max-width: 733px) and (min-width: 569px) {
   li.media {
-    height: 28.5rem;
+    height: auto;
   }
   h4 {
     margin: -0.65rem 0 0.75rem 0;
@@ -394,14 +416,20 @@ button:focus {
     height: 25rem;
   }
   p {
-    margin: -0.25rem 0 0.5rem 0;
+    margin: -0.25rem 0 1.5rem 0;
     line-height: 2rem;
     font-size: 1.85rem;
   }
+  button {
+  width: auto;
+  font-weight: 300;
+  padding: .25rem;
+   font-size: 1.5rem;
+}
 }
 @media (max-width: 991px) and (min-width: 734px) {
   li.media {
-    height: 26rem;
+    height: auto;
   }
   h4 {
     margin: -0.5rem 0 0.75rem 0;
@@ -426,10 +454,18 @@ button:focus {
     line-height: 2rem;
     font-size: 2rem;
   }
+  button {
+  width: auto;
+  font-weight: 300;
+  padding: .25rem;
+}
 }
 @media (max-width: 3000px) and (min-width: 992px) {
   li.media {
-    height: 31.5rem;
+    /*height: 31.5rem;*/
+    max-width: auto;
+    /*height: 32rem;*/
+    max-height: auto;
   }
   h4 {
     margin: -0.6rem 0 0.75rem 0;
@@ -447,14 +483,12 @@ button:focus {
     font-size: 2.5rem;
   }
   .media-object {
-    width: 44rem;
-    /*max-width: auto;*/
-    height: 32rem;
-    /*max-height: 38rem;*/
+    /*width: 44rem;*/
+    max-width: auto;
+    /*height: 32rem;*/
+    max-height: auto;
 
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
+
   }
   .media-object:hover {
     opacity: 0.6;
@@ -463,5 +497,6 @@ button:focus {
     -webkit-transition: opacity 0.4s ease-out;
     -o-transition: opacity 0.4s ease-out;
   }
+
 }
 </style>
