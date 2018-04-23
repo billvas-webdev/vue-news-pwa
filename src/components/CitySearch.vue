@@ -94,9 +94,10 @@ export default {
 
 <style scoped>
 .jumbotron {
+  height:auto;
   border-top: .5px solid lightgoldenrodyellow;
   border-radius: .5em;
-  padding: 3rem 3rem 4rem 3rem ;
+  padding: 3rem 4rem 2rem 6rem ;
   color: #052440;
   background: lightblue;/* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #052440, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
@@ -106,7 +107,7 @@ export default {
 ul.favorite-cities {
   color: lightgoldenrodyellow;
   border: 1px solid #082642;
-  border-radius: 1.65rem;
+  border-radius: 1rem;
   list-style-type: none;
   padding-top: 0px;
   width: 26%;
@@ -163,6 +164,7 @@ a:hover {
   font-weight: 700;
 }
 input {
+  padding-left: 1rem;
   border-width: 1px;
   border-radius: 0.7rem;
   color:#555;
@@ -204,22 +206,36 @@ p {
 
 @media only screen and (max-width: 360px) and (min-width: 337px){
 .jumbotron {
-  height: 25rem;
+  height: auto;
+  padding: 2rem 2rem 1rem 2rem;
 }
 ul.favorite-cities  {
   width: auto;
   float: none;
 }
-h2 {
-  font-size: 2.75rem;
-  padding: 1rem 0 0 0;
-}
 input {
-  height: 4rem;
-  width: 75%;
+  width: 26.3rem;
+}
+h2 {
+  font-size: 2.5rem;
+  padding: 1rem 0 0 0;
 }
 #placeholder {
   font-size:2.25rem;
+}
+}
+@media (max-width: 733px) and (min-width: 569px) {
+ul.favorite-cities  {
+  font-size:1rem;
+  height: auto;
+  width: auto;
+}
+h2 {
+  font-size: 2.6rem;
+}
+input {
+  width: 21.5rem;
+  height: 3.5rem;
 }
 }
 

@@ -1,6 +1,6 @@
 <template>
     <ul class="favorite-cities">
-        <li><h2>Favorite Cities</h2></li>
+        <li><h2><i class="fas fa-globe"></i> Favorite Cities</h2></li>
         <div class="clear"></div>
         <li v-if="favoriteCities.length < 1">No favorites cities to display.</li>
         <li v-for="city in favoriteCities">
@@ -32,7 +32,7 @@ export default {
 .favorite-cities {
   list-style-type: none;
   padding: 10px;
-  width: 25%;
+  width: 26%;
   float: right;
   background: #fff1e5;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #052440, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
@@ -74,16 +74,16 @@ li a button{
 a {
   padding-left: .85rem;
   font-size: 1.65rem;
-  font-weight: 500;
+  font-weight: 400;
   color:#323204;
 }
 a:hover {
-  padding-right: .75rem;
+  text-decoration: none;
   border-radius: .5rem;
   background: #fff1e5;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #44cc74, #009cf8);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom,#44cc74, #009cf8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  font-weight: 700;
+  font-weight: 500;
 
 
 }
@@ -101,15 +101,15 @@ a:hover {
 
 .fa-trash-alt:hover {
   color:#44cc74;
-  font-size: 2.35rem;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 
 
 @media only screen and (max-width: 360px) and (min-width: 337px){
 h2 {
-   margin:1rem auto;
-  font-size: 2rem;
+  margin: 1rem auto;
+  font-size: 2.1rem;
 
 
 }
@@ -118,4 +118,13 @@ a {
   padding-left: 1rem;
 }
 }
+@media (max-width: 733px) and (min-width: 569px) {
+h2 {
+  font-size: 2rem;
+}
+a {
+  font-size: 1.2rem;
+}
+}
+
 </style>
