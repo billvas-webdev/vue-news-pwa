@@ -6,7 +6,7 @@
         <li v-if="favoriteArticles.length < 1">No favorites articles to display.</li>
         <li v-for="article in favoriteArticles">
         <p id="article-source">{{ article.source.name }}
-        <a v-bind:href = "article.url">{{ article.title }} </a> <button v-on:click="removeArticle(article)" class="fas fa-trash-alt"></button></p>
+        <a v-bind:href = "article.url"> {{ article.title }} </a> <button v-on:click="removeArticle(article)" class="fas fa-trash-alt"></button></p>
         </li>
     </ul>
 </template>

@@ -108,9 +108,10 @@ ul.favorite-cities {
   color: lightgoldenrodyellow;
   border: 1px solid #082642;
   border-radius: 1rem;
+  border-top: 0.5px solid lightgoldenrodyellow;
   list-style-type: none;
   padding-top: 0px;
-  width: 26%;
+  width: auto;
   float: right;
   background: #fff1e5;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #052440, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */

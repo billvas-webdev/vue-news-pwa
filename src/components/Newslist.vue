@@ -28,7 +28,7 @@
     </div>
     <favorite-articles v-bind:favoriteArticles='favoriteArticles'></favorite-articles>
   </div>
-</div>
+
 </template>
 
 <script>
@@ -157,10 +157,8 @@ a:focus {
   font-size: 0.5rem;
 }
 .media-object {
-  width: auto;
   max-width: auto;
-  height: 40%;
-  max-height: 38rem;
+  max-height: 40rem;
   border-radius: 2em;
   padding: 2.5rem;
 }
@@ -357,13 +355,17 @@ button {
     height: auto;
     padding: 0.25rem 0rem 0rem 0rem;
   }
+  .media-body{
+    display: block;
+    width: auto;
+  }
   .media-object {
     margin: 1rem 0 0 0.25rem;
     border-radius: 15px;
     float: left;
     padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-    width: 18rem;
-    height: 16rem;
+    width: 35.5rem;
+    height: 20.5rem;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -372,25 +374,26 @@ button {
     padding: -5px;
   }
   h4 {
-    margin: -0.6rem 0 0.75rem 0;
-    line-height: 1.35rem;
-    font-size: 1.5rem;
+    padding: 1rem 1rem 0 1rem;
+    line-height: 1.95rem;
+    font-size: 2.1rem;
+    text-align: center;
   }
   h5 {
-    margin: -0.75rem 0 0.65rem 0;
-    font-size: 1rem;
+    padding: 0 0 0 1rem;
+    font-size: 1.65rem;
     line-height: 1.5rem;
   }
   .article-description {
-    margin: -.5rem .2rem 0.35rem 0;
-    line-height: 1.5rem;
-    font-size: 1.45rem;
+    line-height: 1.85rem;
+    font-size: 1.75rem;
+    padding-left: 1rem;
   }
 button {
   width: auto;
   font-weight: 300;
   padding: .3rem;
-  font-size: 1.25rem;
+  font-size: 1.65rem;
 }
 }
 @media (max-width: 733px) and (min-width: 569px) {
