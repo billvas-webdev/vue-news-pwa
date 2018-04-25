@@ -70,6 +70,7 @@ export default {
 
 <style scoped>
 .jumbotron {
+  padding: 7rem 35rem;
   background: lightblue;/* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #052440, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom,#052440, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -88,6 +89,7 @@ h1, h2 {
 ul {
   list-style-type: none;
   padding: 0;
+
 }
 li {
   display: inline-block;
@@ -95,6 +97,7 @@ li {
   min-height: 300px;
   border: solid 1px #e8e8e8;
   padding: 10px;
+
 }
 a {
   color: #b1ffb9;
@@ -106,9 +109,15 @@ a:hover {
       color: #337ab7;
 }
 div dl {
+  font-weight: 600;
+  font-size: 1.7rem;
+  border-radius: 1rem;
+  border-top: 0.5px solid lightgoldenrodyellow;
   background: lightblue;/* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #758794, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom,#758794, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+}
+dd {
+  padding: 0;
 }
 </style>
