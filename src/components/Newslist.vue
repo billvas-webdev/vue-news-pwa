@@ -4,7 +4,7 @@
       <ul class="media-list">
         <transition-group name="fade" tag="div" mode="out-in">
         <li class="media" v-for="article of articles" :key="article.url">
-          <div class="media-left">
+          <div class="media-center">
             <a v-bind:href="article.url" target="_blank">
               <img class="media-object" v-bind:src="article.urlToImage">
             </a>
@@ -14,7 +14,7 @@
             <h5><i>by {{article.author}}</i></h5>
             <p class="article-description">{{article.description}}</p>
             <button class="save" v-on:click="saveArticle(article)"><i class="far fa-bookmark"></i> Save Article to Favorites</button>
-           <message-container v-bind:messages="messages"></message-container>
+          <message-container v-bind:messages="messages"></message-container>
           </div>
         </li>
       </transition-group>
@@ -156,12 +156,12 @@ a:focus {
 #app > div > div.newslist > ul > li:nth-child(2) > a {
   font-size: 0.5rem;
 }
-.media-object {
+/*.media-object {
   max-width: auto;
   max-height: 40rem;
   border-radius: 2em;
   padding: 2.5rem;
-}
+}*/
 .media {
   border-top: 0.5px solid lightgoldenrodyellow;
 }
@@ -179,6 +179,7 @@ li.media {
     #052440,
     #000000
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient( to top, #445a6f, #052440 );
   border-radius: 0.5em;
   width: auto;
   height: auto;
@@ -192,7 +193,7 @@ li.media {
   color: azure;
   font-size: 2.25rem;
 }
-p {
+/*p {
   font-family: 'Avenir', 'Montseratt';
   line-height: 1.25em;
   padding-right: 1.5em;
@@ -208,7 +209,7 @@ h5 {
   line-height: 1.5em;
   font-size: 1.75rem;
   color: lightgoldenrodyellow;
-}
+}*/
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 1.25s;
@@ -362,10 +363,10 @@ button {
   .media-object {
     margin: 1rem 0 0 0.25rem;
     border-radius: 15px;
-    float: left;
+
     padding: 0.5rem 0.5rem 0.5rem 0.5rem;
     width: 35.5rem;
-    height: 20.5rem;
+    height: 25.5rem;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -464,35 +465,67 @@ button {
 }
 }
 @media (max-width: 3000px) and (min-width: 992px) {
-  li.media {
-    /*height: 31.5rem;*/
-    max-width: auto;
-    /*height: 32rem;*/
-    max-height: auto;
+ li.media {
+    height: auto;
+    width:auto;
+    padding: 2.25rem 0rem 0rem 0rem;
   }
-  h4 {
-    margin: -0.6rem 0 0.75rem 0;
-    line-height: 0.9em;
-    font-size: 3rem;
-  }
-  h5 {
-    margin: 1rem 0 1rem 0;
-    font-size: 2rem;
-    line-height: 1.5rem;
-  }
-  p {
-    margin: 0rem 0 4rem 0;
-    line-height: 2.6rem;
-    font-size: 2.5rem;
+  .media-body{
+    display: block;
+    width: auto;
+    vertical-align: middle;
+    text-align: center;
+    margin-bottom: 1rem;
   }
   .media-object {
-    /*width: 44rem;*/
-    max-width: auto;
-    /*height: 32rem;*/
-    max-height: auto;
+
+    border-radius: 15px;
+    position: relative;
+    text-align:center;
+    height:auto;
+    height: 400px;
+    width:auto;
+    display: block;
+    margin: 0 auto;
+
+
+
+
+
 
 
   }
+  /*.media left {
+    padding: 30rem;
+  }*/
+  h4 {
+    padding: 1rem 20rem 0 20rem;
+    line-height: 2.3rem;
+    font-size: 2.8rem;
+    text-align: center;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+
+  }
+  h5 {
+    padding: 0rem 25rem 0rem 25rem;
+    font-size: 2rem;
+    color: #ff9c9c;
+
+  }
+  .article-description {
+    line-height: 2.3rem;
+    font-size: 2.45rem;
+    padding: 1rem 25rem 1rem 25rem;
+
+  }
+button {
+  width: auto;
+  font-weight: 300;
+  padding: .5rem;
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
   .media-object:hover {
     opacity: 0.6;
     transition: opacity 0.4s ease-out;
