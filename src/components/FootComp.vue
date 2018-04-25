@@ -54,6 +54,11 @@
   font-size: 22px;
   line-height: 22px;
 }
+.btn-info {
+  color: #fff;
+  background-color: #9ae2a9;
+  border-color: #052440;
+}
 @media only screen and (max-width: 360px) and (min-width: 320px){
   .footer .fa-newspaper-o {
 }

@@ -17,6 +17,9 @@
       </transition-group>
     </ul>
     <load-spinner v-if="showLoading"></load-spinner>
+    <back-to-top bottom="50px" right="50px">
+  <button type="button" class="btn btn-info btn-to-top"><i class="fa fa-chevron-up"></i></button>
+</back-to-top>
   </div>
 </template>
 
@@ -130,6 +133,9 @@ li {
   padding: 10px;
   margin: 5px;
   border-radius: 1rem;
+  background: lightblue;/* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #57646d, #263947);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom,#57646d, #263947); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 .weatherSummary{
@@ -147,6 +153,25 @@ a:hover {
 }
 dl {
   color: black;
+}
+.btn-to-top {
+  width: 60px;
+  height: 60px;
+  padding: 10px 16px;
+  border-radius: 50%;
+  font-size: 22px;
+  line-height: 22px;
+}
+.btn-info {
+    color: #fff;
+    background-color: #9ae2a9;
+    border-color: #46b8da;
+}
+@media only screen and (max-width: 360px) and (min-width: 320px){
+ul {
+    padding-left: 2.4rem;
+    zoom: 120%;
+}
 }
 </style>
 
