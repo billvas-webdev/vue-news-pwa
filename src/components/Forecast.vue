@@ -104,8 +104,8 @@ export default {
 <style scoped>
 .jumbotron {
   background: lightblue;  /* fallback for old browsers */
-  background: linear-gradient(to bottom,#082e42, #082f42); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: -webkit-linear-gradient(to bottom, #082e42, #082f42);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #445a6f,#1d4569); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to bottom, #445a6f, #1d4569);  /* Chrome 10-25, Safari 5.1-6 */
 }
 .fade-enter-active, .fade-leave-active {
   transition: opacity 1s

@@ -27,4 +27,15 @@ export default {
   display: inline-block;
   width: 100px;
 }
+img {
+  height: 7.5rem;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  -webkit-filter: contrast(1.25);
+  filter: contrast(3.25);
+}
+b {
+  font-size: 2.5rem;
+}
 </style>

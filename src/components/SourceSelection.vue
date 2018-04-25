@@ -133,7 +133,9 @@ h6{
 }
 .btn-primary:hover {
   border:1px solid #072137;
-  background:#1576cc;
+  background: #1576cc;/* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #1576cc, #6f828f);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom,#1576cc, #6f828f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #072137;
 
 }

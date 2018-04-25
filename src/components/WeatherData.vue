@@ -31,16 +31,21 @@ dl {
   background: #e8e8e8;
 }
 dt {
+  font-size: 1.8rem;
+  font-weight: 600;
   float: left;
   clear: left;
-  width: 120px;
+  width: 126px;
   text-align: right;
   font-weight: bold;
   color: blue;
+
 }
 dd {
   margin: 0 0 0 130px;
   padding: 0 0 0.5em 0;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 dt::after {
   content: ":";
