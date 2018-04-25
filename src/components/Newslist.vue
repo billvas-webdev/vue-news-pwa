@@ -132,12 +132,7 @@ export default {
 .flex-container {
   height:auto;
 }
-body {
-  font-family: 'Avenir';
-}
-h2 {
-  background: yellow;
-}
+
 a {
   color: #299cff;
   -webkit-transition: all 0.2s ease-in-out;
@@ -180,7 +175,7 @@ li.media {
     #000000
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background: linear-gradient( to top, #445a6f, #052440 );
-  border-radius: 0.5em;
+  border-radius: 0.5rem;
   width: auto;
   height: auto;
   /*height: 30.75rem;*/
@@ -224,7 +219,7 @@ ul.favorite-articles {
   text-shadow: 1px 0.75px 0 #052440;
   color: lightgoldenrodyellow;
   border: 1px solid #082642;
-  border-radius: 1.65rem;
+  border-radius: .5rem;
   list-style-type: none;
   padding-top: 0px;
   width: 100%;
@@ -313,7 +308,6 @@ button {
   }
 
   .media-object {
-    margin: 1rem 0 0 0.25rem;
     border-radius: 15px;
     float: left;
     padding: 0.5rem 0.5rem 0.5rem 0.5rem;
@@ -459,10 +453,13 @@ button {
 }
 }
 @media (max-width: 3000px) and (min-width: 992px) {
+
  li.media {
     height: auto;
     width:auto;
     padding: 2.25rem 0rem 0rem 0rem;
+    margin-top: .35rem;
+
 }
 .media-body{
     display: block;

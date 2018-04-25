@@ -14,6 +14,10 @@ import VueAxios from 'vue-axios'
 
 import VueIdb from 'vue-idb'
 
+import BackToTop from 'vue-backtotop'
+
+Vue.use(BackToTop);
+
 Vue.config.productionTip = false
 
 Vue.use(VueAxios,axios)

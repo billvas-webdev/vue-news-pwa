@@ -64,15 +64,14 @@ created () {
 
 <style scoped>
 
-body{
-  font-family: 'Avenir','Montserrat','Lato', arial, sans-serif;
-}
+
 .jumbotron {
   padding: 2rem 25rem 2rem 25rem;
+  margin-bottom: .25rem;
   zoom: 125%;
   height: auto;
   border-top: .5px solid lightgoldenrodyellow;
-  border-radius: .5em;
+  border-radius: .5rem;
   /*background-color: #3491e4;*/
   font-family: 'Montserrat', 'Avenir', sans-serif;
   font-weight: bold;

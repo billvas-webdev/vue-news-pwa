@@ -38,6 +38,8 @@ export default {
 
 }
 .favorite-articles {
+  margin-top:-.75rem;
+  margin-bottom: .75rem;
   list-style-type: none;
   padding: 3rem 3rem 1rem 3rem;
   background: #ccc;

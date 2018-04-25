@@ -5,7 +5,7 @@
     <CitySearch></CitySearch>
     <SourceSelection v-on:sourceChanged="sourceChanged"></SourceSelection>
     <Newslist v-bind:source="source"></Newslist>
-    <!--<FootComp></FootComp>-->
+    <FootComp></FootComp>
   </div>
 </template>
 
@@ -20,6 +20,7 @@ import FavoriteArticles from '@/components/FavoriteArticles'
 
 
 
+
 export default {
     name: 'app',
     components: {
@@ -27,6 +28,7 @@ export default {
       SourceSelection,
       Newslist,
       FootComp,
+
       //FavoriteArticles
     },
     data () {
@@ -102,6 +104,7 @@ body {
     padding-left: 0px;
     padding-right: 0px;
 }
+
 </style>
 
 
