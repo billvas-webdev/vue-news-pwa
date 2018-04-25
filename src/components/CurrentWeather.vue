@@ -120,4 +120,13 @@ div dl {
 dd {
   padding: 0;
 }
+@media only screen and (max-width: 360px) and (min-width: 320px){
+  .jumbotron {
+    padding: 1rem 3rem;
+}
+a {
+  font-size: 2.1rem;
+}
+
+}
 </style>
