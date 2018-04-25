@@ -96,7 +96,7 @@ export default {
 .jumbotron {
   height:auto;
   border-top: .5px solid lightgoldenrodyellow;
-  border-radius: .5em;
+  border-radius: .5rem;
   padding: 3rem 4rem 2rem 6rem ;
   color: #052440;
   background: lightblue;/* fallback for old browsers */

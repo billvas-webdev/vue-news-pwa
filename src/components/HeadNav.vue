@@ -60,9 +60,9 @@
     font-weight: 500;
     font-size: 1.25em;
     font-family: 'Montserrat','Lato', arial, sans-serif;
-    margin-bottom: 4px;
+    margin-bottom: .25rem;
     border-top: .5px solid lightgoldenrodyellow;
-    border-radius: .5em;
+    border-radius: .5rem;
     background: -webkit-linear-gradient(to bottom, #052440, #274969);
     background: linear-gradient(to bottom,#052440, #274969);
 }

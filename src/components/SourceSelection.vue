@@ -64,15 +64,14 @@ created () {
 
 <style scoped>
 
-body{
-  font-family: 'Avenir','Montserrat','Lato', arial, sans-serif;
-}
+
 .jumbotron {
   padding: 2rem 25rem 2rem 25rem;
+  margin-bottom: .25rem;
   zoom: 125%;
   height: auto;
   border-top: .5px solid lightgoldenrodyellow;
-  border-radius: .5em;
+  border-radius: .5rem;
   /*background-color: #3491e4;*/
   font-family: 'Montserrat', 'Avenir', sans-serif;
   font-weight: bold;
@@ -133,7 +132,9 @@ h6{
 }
 .btn-primary:hover {
   border:1px solid #072137;
-  background:#1576cc;
+  background: #1576cc;/* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #1576cc, #6f828f);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom,#1576cc, #6f828f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #072137;
 
 }

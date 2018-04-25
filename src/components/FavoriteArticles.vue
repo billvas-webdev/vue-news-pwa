@@ -5,7 +5,7 @@
        <!-- <div class="clear"></div> -->
         <li v-if="favoriteArticles.length < 1">No favorites articles to display.</li>
         <li v-for="article in favoriteArticles">
-        <p id="article-source">{{ article.source.name }}
+        <p id="article-source">{{ article.source.name }}:
         <a v-bind:href = "article.url"> {{ article.title }} </a> <button v-on:click="removeArticle(article)" class="fas fa-trash-alt"></button></p>
         </li>
     </ul>
@@ -34,10 +34,12 @@ export default {
 #article-source {
   font-weight: bold;
   font-size: 2rem;
-  color:#cde2ff;
+  color:#1f5094;
 
 }
 .favorite-articles {
+  margin-top:-.75rem;
+  margin-bottom: .75rem;
   list-style-type: none;
   padding: 3rem 3rem 1rem 3rem;
   background: #ccc;
@@ -86,9 +88,9 @@ a {
 
 }
 a:hover {
-  font-size: 2.0rem;
-  font-weight: 600;
-  padding: .75rem;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: .5rem;
   border-radius: .5rem;
   text-decoration: none;
   background: #fff1e5;  /* fallback for old browsers */

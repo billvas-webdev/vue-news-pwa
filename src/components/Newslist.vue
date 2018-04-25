@@ -132,18 +132,13 @@ export default {
 .flex-container {
   height:auto;
 }
-body {
-  font-family: 'Avenir';
-}
-h2 {
-  background: yellow;
-}
+
 a {
   color: #299cff;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
 }
 a:hover {
   text-decoration: underline;
@@ -180,16 +175,16 @@ li.media {
     #000000
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background: linear-gradient( to top, #445a6f, #052440 );
-  border-radius: 0.5em;
+  border-radius: 0.5rem;
   width: auto;
   height: auto;
   /*height: 30.75rem;*/
 }
 .newslist {
-  -webkit-transition: all 1.4s ease-in-out;
-  -moz-transition: all 1.4s ease-in-out;
-  -ms-transition: all 1.4s ease-in-out;
-  -o-transition: all 1.4s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
   color: azure;
   font-size: 2.25rem;
 }
@@ -224,22 +219,14 @@ ul.favorite-articles {
   text-shadow: 1px 0.75px 0 #052440;
   color: lightgoldenrodyellow;
   border: 1px solid #082642;
-  border-radius: 1.65rem;
+  border-radius: .5rem;
   list-style-type: none;
   padding-top: 0px;
   width: 100%;
   float: none;
   background: #83939e; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to bottom,
-    #052440,
-    #83939e
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    #052440,
-    #83939e
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to bottom, #052440, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom,#052440, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 ul.favorite-articles li h2 a {
@@ -274,14 +261,16 @@ button {
     #4a5f72
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border: 1px solid lightgoldenrodyellow;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
 }
 button:hover {
   border: 1px solid #072137;
-  background: #1576cc;
+  background: #1576cc;/* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #1576cc, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom,#1576cc, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #072137;
 }
 button:focus {
@@ -319,7 +308,6 @@ button {
   }
 
   .media-object {
-    margin: 1rem 0 0 0.25rem;
     border-radius: 15px;
     float: left;
     padding: 0.5rem 0.5rem 0.5rem 0.5rem;
@@ -457,27 +445,30 @@ button {
     margin: -0.5rem 0 0.5rem 0;
     line-height: 2rem;
     font-size: 2rem;
-  }
-  button {
+}
+button {
   width: auto;
   font-weight: 300;
   padding: .25rem;
 }
 }
 @media (max-width: 3000px) and (min-width: 992px) {
+
  li.media {
     height: auto;
     width:auto;
     padding: 2.25rem 0rem 0rem 0rem;
-  }
-  .media-body{
+    margin-top: .35rem;
+
+}
+.media-body{
     display: block;
     width: auto;
     vertical-align: middle;
     text-align: center;
     margin-bottom: 1rem;
-  }
-  .media-object {
+}
+.media-object {
 
     border-radius: 15px;
     position: relative;
@@ -487,36 +478,24 @@ button {
     width:auto;
     display: block;
     margin: 0 auto;
-
-
-
-
-
-
-
-  }
-  /*.media left {
-    padding: 30rem;
-  }*/
-  h4 {
-    padding: 1rem 20rem 0 20rem;
-    line-height: 2.3rem;
-    font-size: 2.8rem;
-    text-align: center;
-    font-weight: 500;
-    font-family: Arial, Helvetica, sans-serif;
-
-  }
-  h5 {
+}
+h4 {
+  padding: 1rem 20rem 0 20rem;
+  line-height: 2.3rem;
+  font-size: 2.8rem;
+  text-align: center;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h5 {
     padding: 0rem 25rem 0rem 25rem;
     font-size: 2rem;
     color: #ff9c9c;
-
-  }
-  .article-description {
+}
+.article-description {
     line-height: 2.3rem;
     font-size: 2.45rem;
-    padding: 1rem 25rem 1rem 25rem;
+    padding: 0rem 25rem 1rem 25rem;
 
   }
 button {
