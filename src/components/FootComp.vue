@@ -4,7 +4,7 @@
       <div class="container text-center">
                 <!--/* footer content here*/-->
         <small class="copyright"> <i class="fa fa-newspaper-o" aria-hidden="true"></i> <a href="https://www.billvas.com" data-toggle="tooltip" title="Visit my portfolio site at billvas.com"> &nbsp; Made by Bill Vasilopoulos 2018 &nbsp;</a><i class="fas fa-sun" aria-hidden="true"></i></small>
-        <back-to-top bottom="50px" right="50px">
+        <back-to-top class="scroll-placement" bottom="5rem" right="55rem">
         <button type="button" class="btn btn-info btn-to-top"><i class="fa fa-chevron-up"></i></button>
         </back-to-top>
       </div><!--//container-->
@@ -35,6 +35,7 @@
 }
 .footer a {
   color: lightgoldenrodyellow;
+  font-family: "montserrat","avenir", helvetica;
 }
 .footer a:hover{
   color:#082542;
@@ -56,11 +57,24 @@
 }
 .btn-info {
   color: #fff;
-  background-color: #9ae2a9;
+  background-color: #2a9cff;
   border-color: #052440;
 }
-@media only screen and (max-width: 360px) and (min-width: 320px){
+@media only screen and (max-width: 768px) and (min-width: 320px){
   .footer .fa-newspaper-o {
+
+}
+.btn-to-top {
+    width: 50px;
+    height: 50px;
+    padding: 10px 14px;
+    border-radius: 50%;
+    font-size: 20px;
+    line-height: 22px;
+}
+.scroll-placement {
+    bottom: 53px !important;
+    right: 8px  !important;
 }
 }
 </style>

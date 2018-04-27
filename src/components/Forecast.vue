@@ -17,7 +17,7 @@
       </transition-group>
     </ul>
     <load-spinner v-if="showLoading"></load-spinner>
-    <back-to-top bottom="50px" right="50px">
+    <back-to-top class="scroll-placement" bottom="5rem" right="55rem">
   <button type="button" class="btn btn-info btn-to-top"><i class="fa fa-chevron-up"></i></button>
 </back-to-top>
   </div>
@@ -163,14 +163,27 @@ dl {
   line-height: 22px;
 }
 .btn-info {
-    color: #fff;
-    background-color: #9ae2a9;
-    border-color: #46b8da;
+  color: #fff;
+  background-color: #2a9cff;
+  border-color: #052440;
 }
+
 @media only screen and (max-width: 360px) and (min-width: 320px){
 ul {
     padding-left: 2.4rem;
     zoom: 120%;
+}
+.btn-to-top {
+    width: 50px;
+    height: 50px;
+    padding: 10px 14px;
+    border-radius: 50%;
+    font-size: 20px;
+    line-height: 22px;
+}
+.scroll-placement {
+    bottom: 53px !important;
+    right: 6px  !important;
 }
 }
 </style>

@@ -145,5 +145,25 @@ ul.favorite-articles{
     padding: .5rem 2rem .5rem 2rem;
 }
 }
+@media (max-width: 568px) and (min-width: 360px) {
+.favorite-articles {
+  padding: 0rem 2rem 1rem 2rem;
+}
+h2 {
+  font-size: 2.2rem;
+  margin: .5rem 0 0.25rem 0;
+}
+a {
+  font-size: 1.5rem;
+}
+#article-source {
+  font-weight: 500;
+  font-size: 1.5rem;
+  color:#cde2ff;
+}
+.fa-bookmark {
+  font-size: 1.8rem;
+}
+}
 
 </style>

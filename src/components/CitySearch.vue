@@ -225,6 +225,26 @@ h2 {
   font-size:2.25rem;
 }
 }
+@media (max-width: 568px) and (min-width: 360px) {
+.jumbotron {
+  height: auto;
+  padding: 2rem 2rem 1rem 2rem;
+}
+ul.favorite-cities  {
+  width: auto;
+  float: none;
+}
+input {
+  width: 26.3rem;
+}
+h2 {
+  font-size: 2.5rem;
+  padding: 1rem 0 0 0;
+}
+#placeholder {
+  font-size:2.25rem;
+}
+}
 @media (max-width: 733px) and (min-width: 569px) {
 ul.favorite-cities  {
   font-size:1rem;
