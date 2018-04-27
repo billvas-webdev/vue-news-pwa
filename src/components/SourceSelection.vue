@@ -59,14 +59,12 @@ created () {
   }
 },
 }
-
 </script>
 
 <style scoped>
 
-
 .jumbotron {
-  padding: 2rem 25rem 2rem 25rem;
+  padding: 2rem 20rem 2rem 20rem;
   margin-bottom: .25rem;
   zoom: 125%;
   height: auto;
@@ -368,7 +366,7 @@ h6 {
 .jumbotron  {
   zoom:115%;
   height: auto;
-  padding: 1rem 6rem 1rem 8rem;
+  padding: 1rem 8rem 1rem 8rem;
 }
 h2 {
   font-family: "Avenir";
@@ -394,6 +392,35 @@ h6 {
 }
 }
 @media (max-width: 812px) and (min-width: 718px){
+
+.jumbotron  {
+  padding: 2rem 10rem 1rem 10rem;
+  zoom:115%;
+  height: auto;
+}
+h2 {
+  margin-top: -1.5rem;
+  font-size: 3.2rem;
+}
+h4 {
+  font-family: "Avenir";
+  font-size: 2rem;
+  margin: -1rem 0rem .5rem 6rem;
+}
+h6 {
+  line-height: 1.75rem;
+  font-family: "Avenir";
+  font-weight:500;
+  font-size: 1.45rem;
+}
+.btn-primary{
+  font-weight: 700;
+  font-family: "Avenir";
+  width: auto;
+  font-size: 1.6rem;
+}
+}
+@media (max-width: 992px) and (min-width: 812px){
 
 .jumbotron  {
   padding: 2rem 10rem 1rem 10rem;

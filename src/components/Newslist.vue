@@ -28,7 +28,6 @@
     </div>
     <favorite-articles v-bind:favoriteArticles='favoriteArticles'></favorite-articles>
   </div>
-
 </template>
 
 <script>
@@ -132,7 +131,6 @@ export default {
 .flex-container {
   height:auto;
 }
-
 a {
   color: #299cff;
   -webkit-transition: all 0.2s ease-in-out;
@@ -147,16 +145,9 @@ a:hover {
 a:focus {
   text-decoration: none;
 }
-
 #app > div > div.newslist > ul > li:nth-child(2) > a {
   font-size: 0.5rem;
 }
-/*.media-object {
-  max-width: auto;
-  max-height: 40rem;
-  border-radius: 2em;
-  padding: 2.5rem;
-}*/
 .media {
   border-top: 0.5px solid lightgoldenrodyellow;
 }
@@ -189,23 +180,6 @@ li.media {
   color: azure;
   font-size: 2.25rem;
 }
-/*p {
-  font-family: 'Avenir', 'Montseratt';
-  line-height: 1.25em;
-  padding-right: 1.5em;
-  font-size: 1.2em;
-  font-weight: normal;
-}
-h4 {
-  line-height: 1em;
-  font-size: 1.35em;
-  padding-top: 1em;
-}
-h5 {
-  line-height: 1.5em;
-  font-size: 1.75rem;
-  color: lightgoldenrodyellow;
-}*/
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 1.25s;
@@ -281,61 +255,59 @@ button:focus {
 }
 /********* Samsung Galaxy S5 ************/
 @media (max-width: 319px) and (min-width: 150px) {
-  li.media {
-    padding: 0.5rem 2.25rem 0rem 2.5rem;
-    height: auto;
-  }
-  .media-object {
-    display: none;
-  }
-  h4 {
-    text-align: center;
-    line-height: 1em;
-    font-size: 2.6rem;
-  }
-  p {
-    line-height: 1.1em;
-    font-size: 2.6rem;
-  }
+li.media {
+  padding: 0.5rem 2.25rem 0rem 2.5rem;
+  height: auto;
+}
+.media-object {
+  display: none;
+}
+h4 {
+  text-align: center;
+  line-height: 1em;
+  font-size: 2.6rem;
+}
+p {
+  line-height: 1.1em;
+  font-size: 2.6rem;
+}
 button {
   width: auto;
   font-weight: 300;
   padding: .25rem;
 }
-
 }
 @media (max-width: 359px) and (min-width: 320px) {
-  li.media {
-    height: auto;
-    padding: 0.25rem 0.25rem 0rem 0.25rem;
-  }
+li.media {
+  height: auto;
+  padding: 0.25rem 0.25rem 0rem 0.25rem;
+}
+.media-object {
+  border-radius: 15px;
+  float: left;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  width: 16rem;
+  height: 16rem;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-  .media-object {
-    border-radius: 15px;
-    float: left;
-    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-    width: 16rem;
-    height: 16rem;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  h4 {
-    margin: -0.9rem 0 0.75rem 0;
-    line-height: 1em;
-    font-size: 1.4rem;
-  }
-  h5 {
-    margin: -0.65rem 0 0.65rem 0;
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-  }
-  p {
-    margin: -0.65rem 0 0.5rem 0;
-    line-height: 1.3rem;
-    font-size: 1.4rem;
-  }
+h4 {
+  margin: -0.9rem 0 0.75rem 0;
+  line-height: 1em;
+  font-size: 1.4rem;
+}
+h5 {
+  margin: -0.65rem 0 0.65rem 0;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+p {
+  margin: -0.65rem 0 0.5rem 0;
+  line-height: 1.3rem;
+  font-size: 1.4rem;
+}
 button {
   width: auto;
   font-weight: 300;
@@ -344,45 +316,44 @@ button {
 }
 @media (max-width: 568px) and (min-width: 360px) {
 li.media {
-    height: auto;
-    padding: 0.25rem 0rem 0rem 0rem;
-  }
+  height: auto;
+  padding: 0.25rem 0rem 0rem 0rem;
+}
 .media-body{
-    display: block;
-    width: auto;
-  }
+  display: block;
+  width: auto;
+}
 .media-center {
   margin: 1rem 1rem ;
   padding:0;
 }
 .media-object {
-    border-radius: 2rem;
-    position: relative;
-    text-align:center;
-    height:auto;
-    padding: 0rem;
-    width:100%;
-    display: block;
-    margin: 0 auto;
+  border-radius: 2rem;
+  position: relative;
+  text-align:center;
+  height:auto;
+  padding: 0;
+  width:100%;
+  display: block;
+  margin: 0 auto;
 }
-
 h4 {
-    padding: 1rem 1rem 0 1rem;
-    line-height: 1.95rem;
-    font-size: 2.1rem;
-    text-align: center;
-  }
-  h5 {
-    padding: 0 0 0 1rem;
-    font-size: 1.65rem;
-    line-height: 1.5rem;
-    color: #ff9c9c;
-  }
+  padding: 1rem 1rem 0 1rem;
+  line-height: 1.95rem;
+  font-size: 2.1rem;
+  text-align: center;
+}
+h5 {
+  padding: 0 0 0 1rem;
+  font-size: 1.65rem;
+  line-height: 1.5rem;
+  color: #ff9c9c;
+}
 .article-description {
-    line-height: 1.85rem;
-    font-size: 1.75rem;
-    padding-left: 1rem;
-  }
+  line-height: 1.85rem;
+  font-size: 1.75rem;
+  padding-left: 1rem;
+}
 button {
   width: auto;
   font-weight: 300;
@@ -394,37 +365,36 @@ button {
 @media (max-width: 733px) and (min-width: 569px) {
 
 li.media {
-    height: auto;
-    width:100%;
-    padding: 2.25rem 0rem 0rem 0rem;
-    margin-top: .35rem;
-
+  height: auto;
+  width:100%;
+  padding: 2.25rem 0rem 0rem 0rem;
+  margin-top: .35rem;
 }
 .media-body{
-    display: block;
-    width: auto;
-    vertical-align: middle;
-    text-align: center;
-    margin-bottom: 1rem;
+  display: block;
+  width: auto;
+  vertical-align: middle;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 .media-center {
   margin: 1rem 2rem 1rem 2rem;
   padding:0;
 }
 .media-object {
-    border-radius: 2rem;
-    position: relative;
-    text-align:center;
-    height:auto;
-    padding: 0rem;
-    width:100%;
-    display: block;
-    margin: 0 auto;
+  border-radius: 2rem;
+  position: relative;
+  text-align:center;
+  height:auto;
+  padding: 0rem;
+  width:100%;
+  display: block;
+  margin: 0 auto;
 }
 h4 {
-    margin: 1rem 1rem 0rem 1rem;
-    line-height: 2rem;
-    font-size: 2.5rem;
+  margin: 1rem 1rem 0rem 1rem;
+  line-height: 2rem;
+  font-size: 2.5rem;
 }
 h5 {
   text-align: left;
@@ -434,10 +404,10 @@ h5 {
   color: #ff9c9c;
 }
 .article-description {
-    line-height: 2rem;
-    font-size: 2rem;
-    padding-left: 1rem;
-  }
+  line-height: 2rem;
+  font-size: 2rem;
+  padding-left: 1rem;
+}
 button {
   width: auto;
   font-weight: 300;
@@ -447,37 +417,37 @@ button {
 }
 @media (max-width: 1024px) and (min-width: 734px) {
 li.media {
-    height: auto;
-    width:100%;
-    padding: 2.25rem 0rem 0rem 0rem;
-    margin-top: .35rem;
+  height: auto;
+  width:100%;
+  padding: 2.25rem 0rem 0rem 0rem;
+  margin-top: .35rem;
 
 }
 .media-body{
-    display: block;
-    width: auto;
-    vertical-align: middle;
-    text-align: center;
-    margin-bottom: 1rem;
+  display: block;
+  width: auto;
+  vertical-align: middle;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 .media-center {
   margin: 1rem 2rem 1rem 2rem;
   padding:0;
 }
 .media-object {
-    border-radius: 2rem;
-    position: relative;
-    text-align:center;
-    height:auto;
-    padding: 0rem;
-    width:100%;
-    display: block;
-    margin: 0 auto;
+  border-radius: 2rem;
+  position: relative;
+  text-align:center;
+  height:auto;
+  padding: 0rem;
+  width:100%;
+  display: block;
+  margin: 0 auto;
 }
 h4 {
-    margin: 1rem 1rem 0rem 1rem;
-    line-height: 2rem;
-    font-size: 2.5rem;
+  margin: 1rem 1rem 0rem 1rem;
+  line-height: 2rem;
+  font-size: 2.5rem;
 }
 h5 {
   text-align: left;
@@ -487,10 +457,10 @@ h5 {
   color: #ff9c9c;
 }
 .article-description {
-    line-height: 2rem;
-    font-size: 2rem;
-    padding-left: 1rem;
-  }
+  line-height: 2rem;
+  font-size: 2rem;
+  padding-left: 1rem;
+}
 button {
   width: auto;
   font-weight: 300;
@@ -501,18 +471,18 @@ button {
 @media (max-width: 3000px) and (min-width: 1025px) {
 
 li.media {
-    height: auto;
-    width:auto;
-    padding: 2.25rem 0rem 0rem 0rem;
-    margin-top: .35rem;
+  height: auto;
+  width:auto;
+  padding: 2.25rem 0rem 0rem 0rem;
+  margin-top: .35rem;
 
 }
 .media-body{
-    display: block;
-    width: auto;
-    vertical-align: middle;
-    text-align: center;
-    margin-bottom: 1rem;
+  display: block;
+  width: auto;
+  vertical-align: middle;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 .media-center {
   margin: 3rem 12rem;
@@ -535,16 +505,15 @@ h4 {
   font-family: Arial, Helvetica, sans-serif;
 }
 h5 {
-    padding: 0rem 25rem 0rem 25rem;
-    font-size: 2rem;
-    color: #ff9c9c;
+  padding: 0rem 25rem 0rem 25rem;
+  font-size: 2rem;
+  color: #ff9c9c;
 }
 .article-description {
-    line-height: 2.3rem;
-    font-size: 2.75rem;
-    padding: 0rem 15rem 1rem 15rem;
-
-  }
+  line-height: 2.3rem;
+  font-size: 2.75rem;
+  padding: 0rem 15rem 1rem 15rem;
+}
 button {
   width: auto;
   font-weight: 300;
@@ -553,12 +522,11 @@ button {
   font-family: Arial, Helvetica, sans-serif;
 }
   .media-object:hover {
-    opacity: 0.6;
-    transition: opacity 0.4s ease-out;
-    -moz-transition: opacity 0.4s ease-out;
-    -webkit-transition: opacity 0.4s ease-out;
-    -o-transition: opacity 0.4s ease-out;
-  }
-
+  opacity: 0.6;
+  transition: opacity 0.4s ease-out;
+  -moz-transition: opacity 0.4s ease-out;
+  -webkit-transition: opacity 0.4s ease-out;
+  -o-transition: opacity 0.4s ease-out;
+}
 }
 </style>
