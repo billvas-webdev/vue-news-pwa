@@ -180,17 +180,7 @@ background:#072137;
 .fa {
   margin-top:8.5px;
 }
-@media only screen and (max-width: 412px) and (min-width: 360px){
-  .container  {
-    padding: 2.5em .5em .5em .5em ;
-    height: 44rem;
-}
-  h1{
-     margin-bottom: 0rem;
-    margin-top:-3rem;
-    font-size: 3rem;
-  }
-}
+
 @media only screen and (max-width: 360px) and (min-width: 320px){
   .container  {
     padding: 1rem 1rem 0rem 1rem ;
@@ -208,6 +198,21 @@ background:#072137;
   p{
     font-size:2rem;
   }
+}
+@media only screen and (max-width: 412px) and (min-width: 360px){
+.container  {
+    padding: 2.5em .5em .5em .5em ;
+    height: auto;
+}
+h1{
+    margin-bottom: 0rem;
+    margin-top:-3rem;
+    font-size: 3rem;
+}
+p {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
 }
 @media only screen and (max-width: 513px) and (min-width: 413px){
    .container  {

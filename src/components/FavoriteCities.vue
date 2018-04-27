@@ -118,6 +118,9 @@ a {
   padding-left: 1rem;
 }
 }
+@media (max-width: 568px) and (min-width: 360px) {
+
+}
 @media (max-width: 733px) and (min-width: 569px) {
 h2 {
   font-size: 2rem;

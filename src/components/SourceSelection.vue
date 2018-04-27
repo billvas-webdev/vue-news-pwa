@@ -242,7 +242,7 @@ h6 {
 .jumbotron  {
   zoom:115%;
   height: auto;
-  padding: 1rem 2rem 1.5rem 2rem;
+  padding: 2rem 2rem 1.5rem 2rem;
 }
 h2 {
   font-family: "Avenir";
@@ -393,9 +393,10 @@ h6 {
   font-size: 1.65rem;
 }
 }
-@media (max-width: 743px) and (min-width: 718px){
+@media (max-width: 812px) and (min-width: 718px){
 
 .jumbotron  {
+  padding: 2rem 10rem 1rem 10rem;
   zoom:115%;
   height: auto;
 }
