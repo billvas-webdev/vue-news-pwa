@@ -10,7 +10,7 @@
   </div>
   <select class="form-control list-inline" data-show-icon="true" v-on:change="sourceChanged">
     <option data-content="<i class= 'far fa-hand-point-right'></i>"</option>
-    <option value="">Select News Source </option>
+    <option value="">  Select News Source </option>
     <option v-bind:value="source.id" v-for="source of sources">{{source.name}}</option>
   </select>
   </div>
@@ -140,21 +140,24 @@ h6{
   text-decoration: none;
 }
 select.form-control {
-  color: #555;
+
+  color:#1e3a52;
   font-family: 'Avenir','Montserrat','Lato', arial, sans-serif;
   font-size: 2rem;
   font-weight: 500;
-  height: 4.5rem;
+  height: 5rem;
   /*background-color: lightgoldenrodyellow;*/
   background: #fff1e5;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #97a5ae, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom,#97a5ae, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to bottom, #fff, #8aa4ba);
+  background: linear-gradient(to bottom,#fff, #8aa4ba);
   /*color:#2b3b50;*/
 }
 select.form-control:hover {
+  color: #1e3a52;
   background: #fff1e5;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #44cc74, #009cf8);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom,#44cc74, #009cf8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to bottom,  #fff,  #42a5ff);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #fff,  #42a5ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-weight: 700;
 }
 .far {
   position:relative;
@@ -167,8 +170,8 @@ select.form-control:hover {
   background-color: lightgoldenrodyellow;
   color:#2b3b50;
   background: #fff1e5;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #97a5ae, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom,#97a5ae, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to bottom, #42596d, #cce6ff);
+  background: linear-gradient(to bottom,#42596d, #cce6ff);
 }
 
 /******* IPHONE 6 ********/
@@ -233,6 +236,13 @@ h6 {
   margin-top: 1rem;
   width:auto;
   font-size: 1.5rem;
+}
+select.form-control {
+  font-size: 2.25rem;
+
+}
+::placeholder{
+  font-size: 2.25rem;
 }
 }
 

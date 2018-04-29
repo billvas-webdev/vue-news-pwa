@@ -27,8 +27,12 @@ export default {
 
 <style scoped>
 dl {
+  border-top: .5px solid lightgoldenrodyellow;
+  border-radius: .5rem;
   padding: 5px;
-  background: #e8e8e8;
+  background: #e8e8e8; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #fff, #8aa4ba);
+  background: linear-gradient(to bottom,#fff, #8aa4ba);
 }
 dt {
   font-size: 1.8rem;

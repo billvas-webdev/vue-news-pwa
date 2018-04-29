@@ -94,8 +94,8 @@ a:hover {
   border-radius: .5rem;
   text-decoration: none;
   background: #fff1e5;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #44cc74, #009cf8);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom,#44cc74, #009cf8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to bottom,  #fff,  #42a5ff);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #fff,  #42a5ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 p {
     margin: 0 0 .2rem;

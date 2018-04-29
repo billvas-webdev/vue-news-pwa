@@ -485,7 +485,7 @@ li.media {
   margin-bottom: 1rem;
 }
 .media-center {
-  margin: 3rem 12rem;
+  margin: 3rem 15rem;
   padding:0;
 }
 .media-object {
