@@ -3,11 +3,11 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" aria-controls="navbar">
         <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
       </button>
       <router-link class="navbar-brand" to="/"><i class="fa fa-home" aria-hidden="true"></i> Daily News and Weather</router-link>
     </div>
@@ -30,46 +30,94 @@
 
 <style scoped>
 .navbar-nav>li>a{
-    color:lightgoldenrodyellow;
-    font-weight:bold;
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -ms-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
+  color:lightgoldenrodyellow;
+  font-weight:bold;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
 }
 .navbar-nav>li>a:hover {
-   /*color: #9cd1ff;*/
-    color: #44cc74;
+  /*color: #9cd1ff;*/
+  color: #009cf8;
 }
 .navbar-nav>li>a:focus {
-    text-decoration: none;
+  text-decoration: none;
+  background: -webkit-linear-gradient(to bottom, #2672b4, #b1d9ff);
+  background: linear-gradient(to bottom,#2672b4, #b1d9ff);
 }
 .navbar-brand {
-    color: lightgoldenrodyellow;
-    font-weight:bold;
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -ms-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
+  color: lightgoldenrodyellow;
+  font-weight:bold;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
 }
 .navbar-brand:hover {
-    /*color: #9cd1ff;*/
-    color: #44cc74;
+  color: #009cf8;
 }
 .navbar {
-    font-weight: 500;
-    font-size: 1.25em;
-    font-family: 'Montserrat','Lato', arial, sans-serif;
-    margin-bottom: .25rem;
-    border-top: .5px solid lightgoldenrodyellow;
-    border-radius: .5rem;
-    background: -webkit-linear-gradient(to bottom, #052440, #274969);
-    background: linear-gradient(to bottom,#052440, #274969);
+  font-weight: 500;
+  font-size: 1.25em;
+  font-family: 'Montserrat','Lato', arial, sans-serif;
+  margin-bottom: .25rem;
+  border-top: .5px solid lightgoldenrodyellow;
+  border-radius: .5rem;
+  background: -webkit-linear-gradient(to bottom, #052440, #274969);
+  background: linear-gradient(to bottom,#052440, #274969);
 }
 h2{
-    text-align: center;
-    font-weight:bold;
-    margin-bottom: 10px;
+  text-align: center;
+  font-weight:bold;
+  margin-bottom: 10px;
 }
+.navbar-toggle{
+  background: -webkit-linear-gradient(to bottom, #12304a, #cce6ff);
+  background: linear-gradient(to bottom,#12304a, #cce6ff);
+}
+.navbar-toggle .icon-bar {
+  background: -webkit-linear-gradient(to bottom, #2672b4, #151b21);
+  background: linear-gradient(to bottom,#2672b4, #151b21);
+  width: 22px;
+  transition: all 0.2s;
+}
+.navbar-toggle .top-bar {
+  -webkit-transform: rotate(45deg);
+  -webkit-transform-origin: 10% 10%;
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+  -ms-transform: rotate(45deg);
+  -ms-transform-origin: 10% 10%;
+}
+.navbar-toggle .middle-bar {
+  opacity: 0;
+}
+.navbar-toggle .bottom-bar {
+  -webkit-transform: rotate(-45deg);
+  -webkit-transform-origin: 10% 90%;
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+  -ms-transform: rotate(-45deg);
+  -ms-transform-origin: 10% 90%;
+}
+.navbar-toggle.collapsed .top-bar {
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+  -ms-transform: rotate(0);
+}
+.navbar-toggle.collapsed .middle-bar {
+  opacity: 1;
+}
+.navbar-toggle.collapsed .bottom-bar {
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+  -ms-transform: rotate(0);
+}
+inverse .navbar-toggle:hover {
+  background: -webkit-linear-gradient(to bottom, #052440, #274969);
+  background: linear-gradient(to bottom,#052440, #274969);
+}
+
 
 </style>
