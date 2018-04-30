@@ -106,21 +106,24 @@ export default {
 
 <style scoped>
 .jumbotron {
+  padding-top: 0;
+  padding-bottom: 2rem;
+  color: lightgoldenrodyellow;
+  font-weight: normal;
   background: lightblue;  /* fallback for old browsers */
   background: linear-gradient(to bottom, #445a6f,#1d4569); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background: -webkit-linear-gradient(to bottom, #445a6f, #1d4569);  /* Chrome 10-25, Safari 5.1-6 */
 }
+h2 {
+  padding-top: 1rem;
+  margin-top: 0;
+  }
 .fade-enter-active, .fade-leave-active {
   transition: opacity 1s
 }
 .fade-enter, .fade-leave-to {
   opacity: 0
 }
-.jumbotron{
-  color: lightgoldenrodyellow;
-  font-weight: normal;
-}
-
 ul {
   list-style-type: none;
   padding-left: 7rem;
@@ -164,8 +167,17 @@ dl {
 }
 .btn-info {
   color: #fff;
-  background-color: #2a9cff;
+  background: -webkit-linear-gradient(to bottom, #1576cc, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom,#1576cc, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border-color: #052440;
+}
+.scroll-placement {
+    bottom: 53px !important;
+    right: 25px  !important;
+}
+.btn-to-top:hover{
+  background: -webkit-linear-gradient(to bottom, #95727e, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom,#95727e, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 @media only screen and (max-width: 360px) and (min-width: 320px){
@@ -184,6 +196,12 @@ ul {
 .scroll-placement {
     bottom: 53px !important;
     right: 6px  !important;
+}
+}
+@media (max-width: 717px) and (min-width: 511px){
+  .scroll-placement {
+    bottom:10px !important;
+    right: 10px  !important;
 }
 }
 </style>

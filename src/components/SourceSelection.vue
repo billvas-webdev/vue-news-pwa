@@ -140,7 +140,6 @@ h6{
   text-decoration: none;
 }
 select.form-control {
-
   color:#1e3a52;
   font-family: 'Avenir','Montserrat','Lato', arial, sans-serif;
   font-size: 2rem;
@@ -177,13 +176,17 @@ select.form-control:hover {
 /******* IPHONE 6 ********/
 @media only screen and (max-width: 337px) and (min-width: 320px){
 .jumbotron  {
-  zoom:100%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  zoom: 100%;
   height: auto;
+  padding: 0;
 }
 h2 {
   font-family: 'Montserrat','Avenir','Lato', sans-serif;
-  margin-top: -1.5rem;
-  font-size: 3.2rem;
+  margin-top: 0.5rem;
+  font-size: 2.5rem;
   font-weight: bolder;
 }
 h4 {
@@ -203,6 +206,12 @@ h6 {
   margin-top: 1rem;
   width:auto;
   font-size: 1.5rem;
+}
+select.form-control {
+  width: 90;
+  height: 75%;
+  margin-left: auto;
+  margin-right: auto;
 }
 }
 /***********   *************/
@@ -349,8 +358,8 @@ h6 {
 }
 h2 {
   font-family: "Avenir";
-  margin-top: -1.5rem;
-  font-size: 3.2rem;
+  margin-top: 0;
+  font-size: 2.75rem;
 }
 h4 {
   font-family: "Avenir";
