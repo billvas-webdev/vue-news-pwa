@@ -94,6 +94,9 @@ export default {
 
 <style scoped>
 .jumbotron {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   height:auto;
   border-top: .5px solid lightgoldenrodyellow;
   border-radius: .5rem;
@@ -213,6 +216,21 @@ input #placeholder {
   color: #1e3a52;
   font-weight: 500;
 }
+@media only screen and (max-width: 359px) and (min-width: 320px){
+.jumbotron {
+  width: 100%;
+  padding: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+input {
+  width: 80%;
+}
+h2 {
+  font-size: 2rem;
+  margin-left: 1.95rem;
+}
+}
 
 @media only screen and (max-width: 360px) and (min-width: 337px){
 .jumbotron {
@@ -269,5 +287,11 @@ input {
   height: 3.5rem;
 }
 }
+@media (max-width: 930px) and (min-width: 733px) {
+h2 {
+  font-size: 3rem;
+}
+}
+
 
 </style>

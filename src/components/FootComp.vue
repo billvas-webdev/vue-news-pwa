@@ -54,11 +54,22 @@
   border-radius: 50%;
   font-size: 22px;
   line-height: 22px;
+  background: -webkit-linear-gradient(to bottom, #1576cc, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom,#1576cc, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-color: #052440;
+}
+.btn-to-top:hover{
+  background: -webkit-linear-gradient(to bottom, #95727e, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom,#95727e, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .btn-info {
   color: #fff;
   background-color: #2a9cff;
   border-color: #052440;
+}
+.scroll-placement {
+    bottom: 15px !important;
+    right: 15px  !important;
 }
 @media only screen and (max-width: 768px) and (min-width: 320px){
   .footer .fa-newspaper-o {
@@ -73,7 +84,7 @@
     line-height: 22px;
 }
 .scroll-placement {
-    bottom: 53px !important;
+    bottom: 13px !important;
     right: 8px  !important;
 }
 }

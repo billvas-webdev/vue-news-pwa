@@ -100,6 +100,23 @@ a:hover {
 p {
     margin: 0 0 .2rem;
 }
+@media only screen and (max-width: 337px) and (min-width: 320px){
+.favorite-articles {
+  padding: 0rem 1rem 1rem 1rem;
+
+}
+h2 {
+  font-size: 2rem;
+  padding: 0;
+  margin-top: 1rem;
+}
+a {
+  font-size: 1.5rem;
+  line-height: 1rem;
+  padding:0;
+}
+}
+
 @media only screen and (max-width: 360px) and (min-width: 337px){
 .favorite-articles {
   padding: 0rem 2rem 1rem 2rem;

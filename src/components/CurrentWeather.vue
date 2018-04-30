@@ -71,6 +71,9 @@ export default {
 <style scoped>
 .jumbotron {
   padding: 7rem 35rem;
+  width:100%;
+  margin-left: auto;
+  margin-right: auto;
   background: lightblue;/* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #052440, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom,#052440, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -121,12 +124,86 @@ dd {
   padding: 0;
 }
 @media only screen and (max-width: 360px) and (min-width: 320px){
-  .jumbotron {
-    padding: 1rem 3rem;
+.jumbotron {
+  width:100%;
+  padding: 1rem 1rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 a {
   font-size: 2.1rem;
 }
+li {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+h2 {
+  margin-left: 5rem;
 
 }
+}
+
+@media (max-width: 389px) and (min-width: 361px){
+.jumbotron {
+  width:100%;
+  padding: 0rem 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+}
+@media (max-width: 436px) and (min-width: 390px){
+.jumbotron {
+  width:100%;
+  padding: 1rem 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+}
+@media (max-width: 469px) and (min-width: 437px){
+.jumbotron {
+  width:100%;
+  padding: 1rem 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+}
+@media (max-width: 510px) and (min-width: 469px){
+.jumbotron {
+  width:100%;
+  padding: 1rem 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+}
+@media (max-width: 717px) and (min-width: 511px){
+.jumbotron {
+  width: 100%;
+  padding: 1rem 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+}
+@media (max-width: 812px) and (min-width: 718px){
+.jumbotron {
+  width: 100%;
+  padding: 1rem 5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+}
+@media (max-width: 992px) and (min-width: 813px){
+.jumbotron {
+  width: 100%;
+  padding: 1rem 7rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+}
+
+
+
+
+
+
 </style>

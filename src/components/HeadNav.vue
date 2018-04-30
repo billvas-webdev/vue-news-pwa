@@ -43,9 +43,7 @@
 }
 .navbar-nav>li>a:focus {
   text-decoration: none;
-  background: -webkit-linear-gradient(to bottom, #2672b4, #b1d9ff);
-  background: linear-gradient(to bottom,#2672b4, #b1d9ff);
-}
+  }
 .navbar-brand {
   color: lightgoldenrodyellow;
   font-weight:bold;
@@ -73,51 +71,57 @@ h2{
   margin-bottom: 10px;
 }
 .navbar-toggle{
+  padding: 11px ;
   background: -webkit-linear-gradient(to bottom, #12304a, #cce6ff);
   background: linear-gradient(to bottom,#12304a, #cce6ff);
 }
+
 .navbar-toggle .icon-bar {
-  background: -webkit-linear-gradient(to bottom, #2672b4, #151b21);
-  background: linear-gradient(to bottom,#2672b4, #151b21);
-  width: 22px;
-  transition: all 0.2s;
+width: 22px;
+transition: all 0.2s;
 }
 .navbar-toggle .top-bar {
-  -webkit-transform: rotate(45deg);
-  -webkit-transform-origin: 10% 10%;
-  transform: rotate(45deg);
-  transform-origin: 10% 10%;
-  -ms-transform: rotate(45deg);
-  -ms-transform-origin: 10% 10%;
+-webkit-transform: translateX(3px) rotate(45deg);
+-webkit-transform-origin: 10% 10%;
+transform: translateX(3px) rotate(45deg);
+transform-origin: 10% 10%;
+-ms-transform: translateX(3px) rotate(45deg);
+-ms-transform-origin: 10% 10%;
 }
 .navbar-toggle .middle-bar {
-  opacity: 0;
+opacity: 0;
 }
 .navbar-toggle .bottom-bar {
-  -webkit-transform: rotate(-45deg);
-  -webkit-transform-origin: 10% 90%;
-  transform: rotate(-45deg);
-  transform-origin: 10% 90%;
-  -ms-transform: rotate(-45deg);
-  -ms-transform-origin: 10% 90%;
+-webkit-transform:  translateX(3px) rotate(-45deg);
+-webkit-transform-origin: 10% 90%;
+transform:  translateX(3px) rotate(-45deg);
+transform-origin: 10% 90%;
+-ms-transform:  translateX(3px) rotate(-45deg);
+-ms-transform-origin: 10% 90%;
 }
 .navbar-toggle.collapsed .top-bar {
-  -webkit-transform: rotate(0);
-  transform: rotate(0);
-  -ms-transform: rotate(0);
+-webkit-transform: rotate(0);
+transform: rotate(0);
+-ms-transform: rotate(0);
 }
 .navbar-toggle.collapsed .middle-bar {
-  opacity: 1;
+opacity: 1;
 }
 .navbar-toggle.collapsed .bottom-bar {
-  -webkit-transform: rotate(0);
-  transform: rotate(0);
-  -ms-transform: rotate(0);
+-webkit-transform: rotate(0);
+transform: rotate(0);
+-ms-transform:  rotate(0);
 }
-inverse .navbar-toggle:hover {
-  background: -webkit-linear-gradient(to bottom, #052440, #274969);
-  background: linear-gradient(to bottom,#052440, #274969);
+@media only screen and (max-width: 360px) and (min-width: 320px){
+.navbar-brand {
+  font-size: 1.6rem;
+  line-height: 3rem;
 }
-
-
+}
+@media (max-width: 389px) and (min-width: 361px){
+  .navbar-brand {
+  font-size: 1.6rem;
+  line-height: 3rem;
+}
+}
 </style>

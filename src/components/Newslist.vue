@@ -253,6 +253,7 @@ button:hover {
 button:focus {
   text-decoration: none;
 }
+
 /********* Samsung Galaxy S5 ************/
 @media (max-width: 319px) and (min-width: 150px) {
 li.media {
@@ -280,38 +281,64 @@ button {
 @media (max-width: 359px) and (min-width: 320px) {
 li.media {
   height: auto;
-  padding: 0.25rem 0.25rem 0rem 0.25rem;
+  width:100%;
+  padding: 2.25rem 0rem 0rem 0rem;
+  margin-top: .35rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.media-body{
+  display: block;
+  width: auto;
+  vertical-align: middle;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.media-center {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding:0;
 }
 .media-object {
-  border-radius: 15px;
-  float: left;
-  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-  width: 16rem;
-  height: 16rem;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
+  border-radius: 2rem;
+  position: relative;
+  text-align:center;
+  height:auto;
+  padding: 0rem;
+  width:100%;
+  display: block;
+  margin: 0 auto;
 }
-
 h4 {
-  margin: -0.9rem 0 0.75rem 0;
-  line-height: 1em;
-  font-size: 1.4rem;
+  margin: 1rem 1rem 0rem 1rem;
+  line-height: 2rem;
+  font-size: 2.5rem;
 }
 h5 {
-  margin: -0.65rem 0 0.65rem 0;
-  font-size: 1.2rem;
+  text-align: left;
+  margin: 1rem 0 1rem 2rem;
+  font-size: 1.75rem;
   line-height: 1.5rem;
+  color: #ff9c9c;
 }
-p {
-  margin: -0.65rem 0 0.5rem 0;
-  line-height: 1.3rem;
-  font-size: 1.4rem;
+.article-description {
+  line-height: 2rem;
+  font-size: 2rem;
+  padding-left: 1rem;
 }
 button {
   width: auto;
   font-weight: 300;
   padding: .25rem;
+  font-size: 2rem;
+}
+ul.favorite-articles {
+  margin: 0;
+  line-height: 1rem;
+}
+h2 {
+  margin-top: 1rem;
 }
 }
 @media (max-width: 568px) and (min-width: 360px) {
@@ -339,7 +366,7 @@ li.media {
 }
 h4 {
   padding: 1rem 1rem 0 1rem;
-  line-height: 1.95rem;
+  line-height: 2.2rem;
   font-size: 2.1rem;
   text-align: center;
 }

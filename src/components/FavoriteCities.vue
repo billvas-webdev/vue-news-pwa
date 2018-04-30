@@ -105,6 +105,16 @@ a:hover {
   font-weight: 600;
 }
 
+@media only screen and (max-width: 337px) and (min-width: 320px){
+ul.favorite-cities {
+  width: 100%;
+  margin-left: 0;
+  margin-right: auto;
+}
+h2 {
+  font-size: 2rem;
+}
+}
 
 @media only screen and (max-width: 360px) and (min-width: 337px){
 h2 {
