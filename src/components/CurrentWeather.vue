@@ -138,10 +138,6 @@ li {
   margin-left: auto;
   margin-right: auto;
 }
-h2 {
-  margin-left: 5rem;
-
-}
 }
 
 @media (max-width: 389px) and (min-width: 361px){

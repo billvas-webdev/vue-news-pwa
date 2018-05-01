@@ -337,9 +337,6 @@ ul.favorite-articles {
   margin: 0;
   line-height: 1rem;
 }
-h2 {
-  margin-top: 1rem;
-}
 }
 @media (max-width: 568px) and (min-width: 360px) {
 li.media {
