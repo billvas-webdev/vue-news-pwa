@@ -277,6 +277,13 @@ button {
   font-weight: 300;
   padding: .25rem;
 }
+ .article-description {
+  overflow: hidden;
+  display: -webkit-box; /* added ellipses for more than 5 lines*/
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  font-size: 2rem;
+ }
 }
 @media (max-width: 359px) and (min-width: 320px) {
 li.media {
@@ -312,8 +319,8 @@ li.media {
 }
 h4 {
   margin: 1rem 1rem 0rem 1rem;
-  line-height: 2rem;
-  font-size: 2.5rem;
+  line-height: 2.35rem;
+  font-size: 2.2rem;
 }
 h5 {
   text-align: left;
@@ -323,9 +330,14 @@ h5 {
   color: #ff9c9c;
 }
 .article-description {
-  line-height: 2rem;
-  font-size: 2rem;
+  text-align: left;
+  line-height: 2.2rem;
+  font-size: 1.85rem;
   padding-left: 1rem;
+  overflow: hidden;
+  display: -webkit-box; /* added ellipses for more than 5 lines*/
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
 }
 button {
   width: auto;
@@ -374,9 +386,13 @@ h5 {
   color: #ff9c9c;
 }
 .article-description {
-  line-height: 1.85rem;
+  line-height: 2rem;
   font-size: 1.75rem;
   padding-left: 1rem;
+  overflow: hidden;
+  display: -webkit-box; /* added ellipses for more than 5 lines*/
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
 }
 button {
   width: auto;
@@ -402,7 +418,7 @@ li.media {
   margin-bottom: 1rem;
 }
 .media-center {
-  margin: 1rem 2rem 1rem 2rem;
+  margin: 1rem 10rem 1rem 10rem;
   padding:0;
 }
 .media-object {
@@ -416,21 +432,26 @@ li.media {
   margin: 0 auto;
 }
 h4 {
-  margin: 1rem 1rem 0rem 1rem;
+  margin: 1rem 8rem 0rem 8rem;
   line-height: 2rem;
   font-size: 2.5rem;
 }
 h5 {
   text-align: left;
-  margin: 1rem 0 1rem 2rem;
+  padding: 0 10rem 1rem 10rem;
   font-size: 1.75rem;
   line-height: 1.5rem;
   color: #ff9c9c;
 }
 .article-description {
+  text-align: left;
   line-height: 2rem;
   font-size: 2rem;
-  padding-left: 1rem;
+  padding: 0 10rem 1rem 10rem;
+  overflow: hidden;
+  display: -webkit-box; /* added ellipses for more than 5 lines*/
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
 }
 button {
   width: auto;
@@ -443,7 +464,6 @@ button {
 li.media {
   height: auto;
   width:100%;
-  padding: 2.25rem 0rem 0rem 0rem;
   margin-top: .35rem;
 
 }
@@ -455,7 +475,7 @@ li.media {
   margin-bottom: 1rem;
 }
 .media-center {
-  margin: 1rem 2rem 1rem 2rem;
+  margin: 2rem 13rem 1rem 13rem;
   padding:0;
 }
 .media-object {
@@ -463,27 +483,30 @@ li.media {
   position: relative;
   text-align:center;
   height:auto;
-  padding: 0rem;
+  padding: 0;
   width:100%;
   display: block;
   margin: 0 auto;
 }
 h4 {
-  margin: 1rem 1rem 0rem 1rem;
+  padding: 1rem 14rem 0 14rem;
   line-height: 2rem;
   font-size: 2.5rem;
 }
 h5 {
   text-align: left;
-  margin: 1rem 0 1rem 2rem;
+  padding: 0 12rem 1rem 12rem;
   font-size: 1.75rem;
   line-height: 1.5rem;
   color: #ff9c9c;
 }
 .article-description {
+  text-align: left;
   line-height: 2rem;
   font-size: 2rem;
-  padding-left: 1rem;
+  padding: 0 12rem 1rem 12rem;
+  overflow: hidden;
+
 }
 button {
   width: auto;
@@ -534,8 +557,9 @@ h5 {
   color: #ff9c9c;
 }
 .article-description {
-  line-height: 2.3rem;
-  font-size: 2.75rem;
+  text-align: left;
+  line-height: 2.5rem;
+  font-size: 2.3rem;
   padding: 0rem 15rem 1rem 15rem;
 }
 button {

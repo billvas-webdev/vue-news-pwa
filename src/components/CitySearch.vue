@@ -4,7 +4,7 @@
     <h2><i class="fas fa-sun fa-spin"></i>Weather Forecast</h2>
     <message-container v-bind:messages="messages"></message-container>
     <form v-on:submit.prevent="getCities">
-        <p><input type="text" v-model="query" placeholder="  Enter city name"> <button type="submit">Go</button></p>
+        <p><input type="text" v-model="query" placeholder="Enter city name"> <button type="submit">Go</button></p>
     </form>
     <load-spinner v-if="showLoading"></load-spinner>
     <ul class="cities" v-if="results && results.list.length > 0">
@@ -225,6 +225,7 @@ input #placeholder {
 }
 input {
   width: 80%;
+  height: 4rem;
 }
 h2 {
   font-size: 2rem;
@@ -242,8 +243,9 @@ ul.favorite-cities  {
   float: none;
 }
 input {
-  width: 26.3rem;
+  width: 82%;
   font-size: 2.25rem;
+  height: 4rem;
 }
 h2 {
   font-size: 2.5rem;
@@ -263,7 +265,8 @@ ul.favorite-cities  {
   float: none;
 }
 input {
-  width: 26.3rem;
+  width: 70%;
+  height: 4rem;
 }
 h2 {
   font-size: 2.5rem;
@@ -280,11 +283,11 @@ ul.favorite-cities  {
   width: auto;
 }
 h2 {
-  font-size: 2.6rem;
+  font-size: 2.5rem;
 }
 input {
-  width: 21.5rem;
-  height: 3.5rem;
+  width: 43%;
+  height: 4rem;
 }
 }
 @media (max-width: 930px) and (min-width: 733px) {
