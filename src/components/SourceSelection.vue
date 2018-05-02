@@ -208,10 +208,11 @@ h6 {
   font-size: 1.5rem;
 }
 select.form-control {
-  width: 90;
-  height: 75%;
+  width: 90%;
+  height: 4rem;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 1rem;
 }
 }
 /***********   *************/
@@ -248,6 +249,7 @@ h6 {
 }
 select.form-control {
   font-size: 2.25rem;
+  height: 4rem;
 
 }
 ::placeholder{
@@ -264,7 +266,7 @@ select.form-control {
 h2 {
   font-family: "Avenir";
   margin-top: -1.5rem;
-  font-size: 3.2rem;
+  font-size: 2.7rem;
 }
 h4 {
   font-family: "Avenir";
@@ -284,6 +286,9 @@ h6 {
   width: auto;
   font-size: 1.37rem;
 }
+select.form-control {
+  height: 4rem;
+}
 }
 
 @media (max-width: 436px) and (min-width: 390px){
@@ -295,8 +300,8 @@ h6 {
 }
 h2 {
   font-family: "Avenir";
-  margin-top: -1.5rem;
-  font-size: 3.2rem;
+  margin-top: 0;
+  font-size: 2.5rem;
 }
 h4 {
   font-family: "Avenir";
@@ -315,6 +320,9 @@ h6 {
   font-family: "Avenir";
   width: auto;
   font-size: 1.37rem;
+}
+select.form-control {
+  height: 4rem;
 }
 }
 
@@ -379,18 +387,24 @@ h6 {
   width: auto;
   font-size: 1.55rem;
 }
+select.form-control {
+  width: 90%;
+  height: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+}
 }
 @media (max-width: 717px) and (min-width: 511px){
 
 .jumbotron  {
   zoom:115%;
   height: auto;
-  padding: 1rem 8rem 1rem 8rem;
+  padding: 1rem 5rem 1rem 5rem;
 }
 h2 {
   font-family: "Avenir";
   margin-top: 0;
-  font-size: 3.2rem;
+  font-size: 2.5rem;
 }
 h4 {
   font-family: "Avenir";
@@ -408,6 +422,12 @@ h6 {
   font-family: "Avenir";
   width: auto;
   font-size: 1.65rem;
+}
+select.form-control {
+  width: 90%;
+  height: 4rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 }
 @media (max-width: 812px) and (min-width: 718px){
