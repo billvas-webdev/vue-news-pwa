@@ -39,7 +39,7 @@ export default {
   }
 },
 created () {
-  this.axios.get('https://newsapi.org/v2/sources?language=en&apiKey=30fdd9c8493742eebe75a786fc36f1bd')
+  this.axios.get('https://desolate-retreat-58651.herokuapp.com/https://newsapi.org/v2/sources?language=en&apiKey=30fdd9c8493742eebe75a786fc36f1bd')
     .then(response => {
       this.sources = response.data.sources
     })
