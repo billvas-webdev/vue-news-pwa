@@ -78,7 +78,7 @@ export default {
     updateSource(source) {
       this.axios
         .get(
-          "https://desolate-retreat-58651.herokuapp.com/https://newsapi.org/v2/top-headlines?sources=" +
+          "https://newsapi.org/v2/top-headlines?sources=" +
             source +
             "&apiKey=30fdd9c8493742eebe75a786fc36f1bd"
         )
