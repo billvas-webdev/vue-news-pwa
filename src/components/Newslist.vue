@@ -11,12 +11,14 @@
             </div>
             <div class="media-body">
               <h4 class="media-heading">
-                <a v-bind:href="article.url" target="_blank">{{article.title}}</a>
+                <a v-bind:href="article.url" target="_blank">{{
+                  article.title
+                }}</a>
               </h4>
               <h5>
-                <i>by {{article.author}}</i>
+                <i>by {{ article.author }}</i>
               </h5>
-              <p class="article-description">{{article.description}}</p>
+              <p class="article-description">{{ article.description }}</p>
               <button class="save" v-on:click="saveArticle(article)">
                 <i class="far fa-bookmark"></i> Save Article to Favorites
               </button>
@@ -26,11 +28,13 @@
         </transition-group>
       </ul>
       <ul v-if="errors && errors.length">
-        <li v-for="error of errors">{{error.message}}</li>
+        <li v-for="error of errors">{{ error.message }}</li>
       </ul>
       <load-spinner v-if="showLoading"></load-spinner>
     </div>
-    <favorite-articles v-bind:favoriteArticles="favoriteArticles"></favorite-articles>
+    <favorite-articles
+      v-bind:favoriteArticles="favoriteArticles"
+    ></favorite-articles>
   </div>
 </template>
 
@@ -44,7 +48,7 @@ export default {
   components: {
     "load-spinner": CubeSpinner,
     "message-container": MessageContainer,
-    "favorite-articles": FavoriteArticles
+    "favorite-articles": FavoriteArticles,
   },
   props: ["source"],
   data() {
@@ -53,7 +57,7 @@ export default {
       errors: [],
       showLoading: false,
       messages: [],
-      favoriteArticles: []
+      favoriteArticles: [],
     };
   },
   created() {
@@ -63,7 +67,7 @@ export default {
   watch: {
     source(val) {
       this.updateSource(val);
-    }
+    },
   },
   created() {
     if (this.$ls.get("favoriteArticles")) {
@@ -78,21 +82,21 @@ export default {
             source +
             "&apiKey=30fdd9c8493742eebe75a786fc36f1bd"
         )
-        .then(response => {
+        .then((response) => {
           console.log(response.data);
           this.articles = response.data.articles;
         })
-        .catch(e => {
-          //this.errors.push(e);
+        .catch((e) => {
+          this.errors.push(e);
         });
     },
 
-    saveArticle: function(article) {
+    saveArticle: function (article) {
       this.favoriteArticles.push(article);
       this.$ls.set("favoriteArticles", this.favoriteArticles);
     },
 
-    getArticles: function() {
+    getArticles: function () {
       this.results = null;
       this.showLoading = true;
       let cacheLabel = "favoriteArticles_" + this.$ls.article;
@@ -106,25 +110,25 @@ export default {
         this.localStorage
           .getItem("source", {
             params: {
-              q: this.article
-            }
+              q: this.article,
+            },
           })
-          .then(response => {
+          .then((response) => {
             this.$ls.set(cacheLabel, response.data, cacheExpiry);
             console.log("New Query Cached");
             this.results = response.data;
             this.showLoading = false;
           })
-          .catch(error => {
+          .catch((error) => {
             this.messages.push({
               type: "error",
-              text: error.message
+              text: error.message,
             });
             this.showLoading = false;
           });
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
