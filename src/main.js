@@ -8,6 +8,8 @@ import axios from 'axios';
 
 import VueAxios from 'vue-axios';
 
+import Cors from 'cors';
+
 import VueIdb from 'vue-idb';
 
 import BackToTop from 'vue-backtotop';
@@ -15,6 +17,7 @@ import router from './router';
 import App from './App';
 
 Vue.use(BackToTop);
+Vue.use(Cors);
 
 Vue.config.productionTip = false;
 
