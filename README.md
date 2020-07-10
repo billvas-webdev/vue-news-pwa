@@ -1,27 +1,33 @@
-# vue-news2
+# Vue News and Weather App
 
-> A Vue.js project
+## News and Weather Progressive Web App
 
-## Build Setup
+- **Vue JS**
+- **Axios**
+- **Geolocation**
+- **OpenWeatherMap API**
+- **Node JS**
+- **News API**
+- **Bootstrap**
+- **JQuery**
+- **Google Analytics**
 
-``` bash
+## Local Install
+
+- **Due to recent changes in NewsApi's free API plan, project must be installed locally to view news sources and articles**
+
+```bash
+
+# clone repo from github
+
+git clone git@github.com:billvas-webdev/vue-news-pwa.git
+
+# cd into project directory
+cd vue-news-pwa
+
 # install dependencies
 npm install
 
 # serve with hot reload at localhost:8080
 npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run all tests
-npm test
 ```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
